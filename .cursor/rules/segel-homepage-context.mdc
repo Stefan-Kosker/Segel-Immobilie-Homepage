@@ -1,0 +1,18 @@
+---
+description: Segel Immoverwaltung homepage — read project brief before any work
+alwaysApply: true
+---
+
+# Segel Immoverwaltung — mandatory context
+
+Before planning, editing, or generating code or copy in this repository:
+
+1. **Read and follow** the root file **`PROJECT_CONTEXT.md`** (company, positioning, persona, SEO/AIO, design goals, target locations). Treat it as the source of truth unless the user overrides it in chat.
+
+2. **Do not** invent legal claims, fake testimonials, or service areas not confirmed there.
+
+3. **Implementation style** (when building the site): modern, responsive, parallax/animations with respect for `prefers-reduced-motion`; German copy aligned with the persona and value pillars (Entlastung, Ordnung, Sicherheit, Verlässlichkeit, weniger Konflikte, professionelle Außenwirkung).
+
+4. **Assets:** Use the repo **`images/`** folder. Logos live under **`images/Logos/`**; the **homepage logo** is **`images/Logos/Logo-Small.png`** (use for header/branding unless the user specifies another file in that folder).
+
+If `PROJECT_CONTEXT.md` is missing or outdated, ask the user before assuming scope.

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="WEG-Verwaltung mit klaren Prozessen: Abrechnung, Eigentümerversammlungen, Instandhaltung, Versicherungen. Einzugsgebiet Karlsruhe, Rhein-Neckar, Kraichgau und Umgebung."
+    />
+    <title>Segel Immoverwaltung — WEG-Verwaltung Karlsruhe & Region</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/Logos/Logo-Small.png" type="image/png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt springen</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" id="top">
+          <img
+            src="images/Logos/Logo.png"
+            width="429"
+            height="456"
+            alt=""
+            decoding="async"
+          />
+          <span class="brand-text">
+            <span class="brand-name">Segel Immoverwaltung</span>
+            <span class="brand-tag" data-i18n="brandTag">WEG-Verwaltung</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <nav class="site-nav" data-i18n-attr="aria-label" data-i18n="navAria" aria-label="Hauptnavigation">
+            <a href="#leistungen" data-i18n="navServices">Leistungen</a>
+            <a href="#region" data-i18n="navRegion">Region</a>
+            <a href="#ablauf" data-i18n="navProcess">Verwaltungswechsel</a>
+            <a href="#faq" data-i18n="navFaq">FAQ</a>
+            <a href="#kontakt" data-i18n="navContact">Kontakt</a>
+            <a href="#impressum" data-i18n="navImprint">Impressum</a>
+          </nav>
+          <a class="btn btn--header-cta" href="#kontakt" data-i18n="navContact">Kontakt</a>
+          <div class="lang-switch-wrap">
+            <span class="visually-hidden" data-i18n="langToggle" id="lang-switch-label"
+              >Sprache wählen</span
+            >
+            <button
+              type="button"
+              class="lang-toggle-btn"
+              id="lang-toggle"
+              aria-label="Sprache: Deutsch. Auf Englisch umschalten."
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3a14 14 0 0 0 0 18M12 3a14 14 0 0 1 0 18" />
+              </svg>
+              <span id="lang-badge">DE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-decor" aria-hidden="true"></div>
+        <div class="section-inner hero-inner">
+          <p class="hero-logo-wrap">
+            <img
+              class="hero-logo"
+              src="images/Logos/Logo.png"
+              width="429"
+              height="456"
+              alt=""
+              decoding="async"
+            />
+          </p>
+          <div class="hero-split">
+            <div class="hero-copy">
+              <p class="hero-badge" data-i18n="brandTag">WEG-Verwaltung</p>
+              <h1 id="hero-heading" data-i18n="heroH1">
+                WEG-Verwaltung, die entlastet und Struktur schafft
+              </h1>
+              <p class="hero-lead" data-i18n="heroLead">
+                Für WEGs in Karlsruhe und der Region: klare Abläufe, saubere
+                Abrechnung, gut vorbereitete Versammlungen — mit festem
+                Ansprechpartner.
+              </p>
+              <div class="hero-cta">
+                <a class="btn btn--primary" href="#kontakt" data-i18n="ctaPrimary"
+                  >Kontakt aufnehmen</a
+                >
+                <a class="btn btn--ghost" href="#leistungen" data-i18n="ctaSecondary"
+                  >Leistungen ansehen</a
+                >
+              </div>
+            </div>
+            <figure class="hero-figure">
+              <div class="hero-photo-frame hero-photo-parallax">
+                <img
+                  class="hero-photo"
+                  src="images/photos/hero-wohnen.jpg"
+                  width="1400"
+                  height="934"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  data-i18n="heroImgAlt"
+                  data-i18n-attr="alt"
+                  alt="Modernes Wohngebäude (Symbolbild)"
+                />
+              </div>
+              <figcaption class="photo-credit">
+                <span data-i18n="photoCreditPre">Foto:</span>
+                <a
+                  href="https://unsplash.com/photos/be6161a56a0c?utm_source=segel-immobilie-homepage&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Unsplash</a
+                >
+                <span data-i18n="photoCreditPost">(Symbolbild)</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="werte" aria-labelledby="pillars-heading">
+        <div class="section-inner">
+          <h2 id="pillars-heading" data-i18n="pillarsTitle">Worauf es ankommt</h2>
+          <div class="pillars">
+            <article class="pillar">
+              <div class="pillar-head">
+                <img
+                  class="pillar-icon"
+                  src="images/icons/pillar-entlastung.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="pillar1Title">Entlastung</h3>
+              </div>
+              <p data-i18n="pillar1Text">
+                Weniger operative Last auf dem Beirat: Aufgaben werden strukturiert
+                übernommen.
+              </p>
+            </article>
+            <article class="pillar">
+              <div class="pillar-head">
+                <img
+                  class="pillar-icon"
+                  src="images/icons/pillar-ordnung.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="pillar2Title">Ordnung</h3>
+              </div>
+              <p data-i18n="pillar2Text">
+                Klare Abläufe, Fristen und Dokumentation statt Papierchaos.
+              </p>
+            </article>
+            <article class="pillar">
+              <div class="pillar-head">
+                <img
+                  class="pillar-icon"
+                  src="images/icons/pillar-sicherheit.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="pillar3Title">Sicherheit</h3>
+              </div>
+              <p data-i18n="pillar3Text">
+                Sorgfältiger Umgang mit Hausgeld, Verträgen und Versicherungen — ohne
+                Rechtsberatung zu versprechen, wo sie nicht unsere Rolle ist.
+              </p>
+            </article>
+            <article class="pillar">
+              <div class="pillar-head">
+                <img
+                  class="pillar-icon"
+                  src="images/icons/pillar-verlaesslichkeit.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="pillar4Title">Verlässlichkeit</h3>
+              </div>
+              <p data-i18n="pillar4Text">
+                Fristen im Blick; Beschlüsse werden umgesetzt, nicht nur protokolliert.
+              </p>
+            </article>
+            <article class="pillar">
+              <div class="pillar-head">
+                <img
+                  class="pillar-icon"
+                  src="images/icons/pillar-konflikte.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="pillar5Title">Weniger Konflikte</h3>
+              </div>
+              <p data-i18n="pillar5Text">
+                Transparente Kommunikation und klare Moderation reduzieren Reibung.
+              </p>
+            </article>
+            <article class="pillar">
+              <div class="pillar-head">
+                <img
+                  class="pillar-icon"
+                  src="images/icons/pillar-aussenwirkung.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="pillar6Title">Professionelle Außenwirkung</h3>
+              </div>
+              <p data-i18n="pillar6Text">
+                Eine seriöse Anlaufstelle gegenüber Mietern, Versicherern und Handwerkern.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" id="leistungen" aria-labelledby="services-heading">
+        <div class="section-inner">
+          <h2 id="services-heading" data-i18n="servicesTitle">
+            Was wir konkret für Ihre WEG übernehmen
+          </h2>
+          <p class="lead-muted" data-i18n="servicesLead">
+            Klar formuliert — ohne unnötiges Fachchinesisch.
+          </p>
+          <div class="card-grid">
+            <article class="card">
+              <div class="card-head">
+                <img
+                  class="card-icon"
+                  src="images/icons/svc-abrechnung.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="svcAccountingTitle">Abrechnung &amp; Planung</h3>
+              </div>
+              <p data-i18n="svcAccountingItems">
+                Jahresabrechnung, Wirtschaftspläne, Hausgeld, Archiv — inkl.
+                Steuerberater-Schnittstelle, wo sinnvoll.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <img
+                  class="card-icon"
+                  src="images/icons/svc-versammlung.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="svcMeetingsTitle">Eigentümerversammlungen</h3>
+              </div>
+              <p data-i18n="svcMeetingsItems">
+                Einberufung, Tagesordnung, Protokoll, Beschlussvorentwürfe, Umsetzung.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <img
+                  class="card-icon"
+                  src="images/icons/svc-instandhaltung.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="svcMaintenanceTitle">Instandhaltung &amp; Handwerk</h3>
+              </div>
+              <p data-i18n="svcMaintenanceItems">
+                Koordination, Angebote, Abstimmung mit Beschlüssen und Budget.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <img
+                  class="card-icon"
+                  src="images/icons/svc-versicherung.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="svcInsuranceTitle">Versicherungen &amp; Schäden</h3>
+              </div>
+              <p data-i18n="svcInsuranceItems">
+                Begleitung bei Fragen und Schäden; saubere Dokumentation.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <img
+                  class="card-icon"
+                  src="images/icons/svc-formalitaeten.svg"
+                  width="44"
+                  height="44"
+                  alt=""
+                  decoding="async"
+                />
+                <h3 data-i18n="svcLegalTitle">Formalitäten &amp; Schnittstellen</h3>
+              </div>
+              <p data-i18n="svcLegalItems">
+                Organisatorische Themen und Abstimmung mit Partnern — ohne
+                Rechtsberatung, wo Spezialisten nötig sind.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="region" aria-labelledby="region-heading">
+        <div class="section-inner">
+          <h2 id="region-heading" data-i18n="regionTitle">Einzugsgebiet</h2>
+          <p class="lead-muted" data-i18n="regionLead">
+            Schwerpunkt Karlsruhe und Umgebung (ca. 60 km), u. a.:
+          </p>
+          <p class="region-highlight" data-i18n="regionCities">
+            Karlsruhe · Ettlingen · Bruchsal · Rastatt · Baden-Baden · Pforzheim · Mannheim ·
+            Heidelberg · Landau in der Pfalz · Germersheim · Speyer · Schwetzingen · Waghäusel
+            · Stutensee · Bretten · Bühl · Achern
+          </p>
+          <p class="lead-muted region-follow" data-i18n="regionMore">
+            Weitere Orte im Radius gerne — kurz nachfragen, ob es passt.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="ablauf" aria-labelledby="process-heading">
+        <div class="section-inner">
+          <h2 id="process-heading" data-i18n="processTitle">
+            So läuft der Verwaltungswechsel
+          </h2>
+          <p class="lead-muted" data-i18n="processLead">
+            Verwaltungswechsel strukturiert begleiten — damit nichts verloren geht.
+          </p>
+          <ol class="steps">
+            <li>
+              <strong data-i18n="step1Title">Erstgespräch &amp; Bedarf</strong>
+              <p class="step-body" data-i18n="step1Text">
+                Kurz klären: WEG-Größe, Themen, Erreichbarkeit, Ansprechpartner.
+              </p>
+            </li>
+            <li>
+              <strong data-i18n="step2Title">Unterlagen &amp; Übergabe</strong>
+              <p class="step-body" data-i18n="step2Text">
+                Akten und laufende Vorgänge strukturiert übernehmen — mit Checkliste.
+              </p>
+            </li>
+            <li>
+              <strong data-i18n="step3Title">Start &amp; Kommunikation</strong>
+              <p class="step-body" data-i18n="step3Text">
+                Kommunikationskanäle festlegen; Start mit Hausgeld, Versicherung, Terminen.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-heading">
+        <div class="section-inner">
+          <h2 id="faq-heading" data-i18n="faqTitle">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary data-i18n="faq1Q">Wie schnell erreiche ich jemanden bei Dringlichem?</summary>
+              <p data-i18n="faq1A">
+                Im Erstgespräch: Erreichbarkeit und Eskalation transparent vereinbaren.
+              </p>
+            </details>
+            <details>
+              <summary data-i18n="faq2Q">Gibt es einen festen Ansprechpartner?</summary>
+              <p data-i18n="faq2A">
+                Ja — Details klären wir beim Start der Zusammenarbeit.
+              </p>
+            </details>
+            <details>
+              <summary data-i18n="faq3Q">Sind auch kleinere WEGs willkommen?</summary>
+              <p data-i18n="faq3A">
+                In der Regel ja — mit realistischer Abstimmung zu Umfang und Rhythmus.
+              </p>
+            </details>
+            <details>
+              <summary data-i18n="faq4Q">Wie aufwendig ist der Wechsel von der alten Verwaltung?</summary>
+              <p data-i18n="faq4A">
+                Abhängig von Dokumentation und offenen Vorgängen — mit Checkliste gut steuerbar.
+              </p>
+            </details>
+            <details>
+              <summary data-i18n="faq5Q">Ersetzt die Verwaltung Rechts- oder Steuerberatung?</summary>
+              <p data-i18n="faq5A">
+                Nein — bei Bedarf holen wir Steuerberater oder Anwälte hinzu.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="kontakt" aria-labelledby="contact-heading">
+        <div class="section-inner">
+          <div class="contact-block">
+            <h2 id="contact-heading" data-i18n="contactTitle">Kontakt</h2>
+            <p data-i18n="contactLead">
+              Kurz beschreiben, was Sie brauchen — wir melden uns mit einem Vorschlag für ein
+              Erstgespräch.
+            </p>
+            <a
+              class="btn btn--primary"
+              id="mailto-contact"
+              href="mailto:?subject=Anfrage%20WEG-Verwaltung&amp;body="
+              data-i18n="contactCta"
+              >E-Mail vorbereiten</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="impressum">
+      <div class="section-inner">
+        <div class="footer-grid">
+          <div>
+            <strong data-i18n="footerCompany">Segel Immoverwaltung</strong>
+            <p class="footer-brand-sub" data-i18n="brandTag">WEG-Verwaltung</p>
+          </div>
+          <div>
+            <h2 class="imprint-footer-h2" data-i18n="imprintTitle">Impressum</h2>
+            <p class="impressum-placeholder" data-i18n="imprintPlaceholder">
+              Angaben gemäß gesetzlicher Pflicht (Anbieterkennzeichnung) werden vor Veröffentlichung
+              der Website durch die Segel Immoverwaltung ergänzt. Bis dahin wenden Sie sich bitte
+              direkt per E-Mail.
+            </p>
+            <p class="footer-note" data-i18n="imprintPlaceholderNote">
+              Platzhalter bis zur Freigabe der finalen Impressumsdaten.
+            </p>
+          </div>
+        </div>
+        <p class="footer-note" style="border: 0; padding-top: 0">
+          © <span id="year"></span>
+          <span data-i18n="footerCompany">Segel Immoverwaltung</span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
