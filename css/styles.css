@@ -225,6 +225,39 @@ a:hover {
   height: auto;
 }
 
+/* Logo scroll-transition choreography
+   - logo-in-hero  : initial state, header logo is an invisible placeholder
+   - logo-moving   : during the flight animation (header logo still hidden)
+   - logo-in-header: final state, header logo visible, hero logo removed
+*/
+html.logo-in-hero .brand img,
+html.logo-moving .brand img {
+  visibility: hidden;
+}
+
+html.logo-moving .hero-logo-wrap {
+  visibility: hidden;
+}
+
+html.logo-in-header .hero-logo-wrap {
+  display: none;
+}
+
+.logo-flight {
+  position: fixed;
+  margin: 0;
+  z-index: 60;
+  pointer-events: none;
+  transform-origin: top left;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-flight {
+    display: none !important;
+  }
+}
+
 .brand-text {
   display: flex;
   flex-direction: column;
@@ -298,7 +331,6 @@ main > section.section:nth-child(even) {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: min(88dvh, 52rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -308,20 +340,13 @@ main > section.section:nth-child(even) {
   border-bottom: 1px solid var(--color-border);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .hero-decor {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    will-change: transform;
-    background:
-      radial-gradient(ellipse 90% 55% at 78% -15%, var(--color-accent-tint), transparent 52%),
-      radial-gradient(ellipse 50% 40% at 12% 100%, rgba(159, 18, 57, 0.04), transparent 55%);
-  }
-
-  .hero-photo-parallax {
-    will-change: transform;
-  }
+.hero-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 90% 55% at 78% -15%, var(--color-accent-tint), transparent 52%),
+    radial-gradient(ellipse 50% 40% at 12% 100%, rgba(159, 18, 57, 0.04), transparent 55%);
 }
 
 .hero .section-inner.hero-inner {

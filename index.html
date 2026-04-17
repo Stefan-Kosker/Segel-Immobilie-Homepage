@@ -16,6 +16,16 @@
     />
     <link rel="icon" href="images/Logos/Logo-Small.png" type="image/png" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      (function () {
+        var h = document.documentElement;
+        if (window.location.hash) {
+          h.classList.add("logo-in-header");
+        } else {
+          h.classList.add("logo-in-hero");
+        }
+      })();
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Zum Inhalt springen</a>
@@ -101,7 +111,7 @@
               </div>
             </div>
             <figure class="hero-figure">
-              <div class="hero-photo-frame hero-photo-parallax">
+              <div class="hero-photo-frame">
                 <img
                   class="hero-photo"
                   src="images/photos/hero-wohnen.jpg"

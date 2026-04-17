@@ -265,39 +265,204 @@
     }
   }
 
-  function initHeroParallax() {
-    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (reduceMotion.matches) return;
+  function initLogoTransition() {
+    var html = document.documentElement;
+    var headerLogo = document.querySelector(".brand img");
+    var heroWrap = document.querySelector(".hero-logo-wrap");
+    var heroLogo = heroWrap ? heroWrap.querySelector(".hero-logo") : null;
+    var heroBadge = document.querySelector(".hero-badge");
+    var header = document.querySelector(".site-header");
+    if (!headerLogo || !heroWrap || !heroLogo || !heroBadge || !header) return;
 
-    var hero = document.querySelector(".hero");
-    var decor = document.querySelector(".hero-decor");
-    var photo = document.querySelector(".hero-photo-parallax");
-    if (!hero || !decor || !photo) return;
+    // If the page was opened with a hash or already scrolled (back/forward cache,
+    // anchor, or browser scroll restoration), skip straight to the final state.
+    if (window.location.hash || window.scrollY > 0) {
+      var preWrapHeight =
+        window.scrollY > 0 ? heroWrap.getBoundingClientRect().height : 0;
+      var preScroll = window.scrollY;
+      // Disable scroll anchoring AND force scroll-behavior auto so the
+      // compensating scroll is instant (CSS defaults to smooth site-wide).
+      var prevAnchorEarly = html.style.overflowAnchor;
+      var prevBehaviorEarly = html.style.scrollBehavior;
+      html.style.overflowAnchor = "none";
+      html.style.scrollBehavior = "auto";
+      html.classList.remove("logo-in-hero");
+      html.classList.remove("logo-moving");
+      html.classList.add("logo-in-header");
+      if (preWrapHeight > 0) {
+        window.scrollTo({
+          top: Math.max(0, preScroll - preWrapHeight),
+          left: 0,
+          behavior: "instant"
+        });
+      }
+      requestAnimationFrame(function () {
+        html.style.overflowAnchor = prevAnchorEarly;
+        html.style.scrollBehavior = prevBehaviorEarly;
+      });
+      return;
+    }
 
-    var ticking = false;
+    // Prevent the browser from restoring a previous scroll position on reload,
+    // so we reliably start at the top and play the transition.
+    if ("scrollRestoration" in history) {
+      try { history.scrollRestoration = "manual"; } catch (e) { /* noop */ }
+    }
 
-    function update() {
-      var maxT = Math.max(hero.offsetHeight, 1);
-      var t = Math.min(window.scrollY, maxT);
-      var d = t * 0.16;
-      var p = t * 0.07;
-      decor.style.transform = "translate3d(0, " + d + "px, 0)";
-      photo.style.transform = "translate3d(0, " + p + "px, 0)";
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var triggered = false;
+
+    function trigger() {
+      if (triggered) return;
+      triggered = true;
+
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("wheel", onIntent);
+      window.removeEventListener("touchstart", onIntent);
+      window.removeEventListener("touchmove", onIntent);
+      window.removeEventListener("keydown", onKey);
+
+      var heroRect = heroLogo.getBoundingClientRect();
+      var badgeRect = heroBadge.getBoundingClientRect();
+      var headerH = header.getBoundingClientRect().height;
+      var targetDocY = Math.max(
+        0,
+        Math.round(window.scrollY + badgeRect.top - headerH)
+      );
+
+      // Reduced motion: snap straight to the final state (no clone, no
+      // animation). Apply the class change (removing hero-logo-wrap from
+      // flow), then measure the badge's new position and scroll so it lands
+      // under the header.
+      if (reduceMotion) {
+        var prevAnchorRM = html.style.overflowAnchor;
+        var prevBehaviorRM = html.style.scrollBehavior;
+        html.style.overflowAnchor = "none";
+        html.style.scrollBehavior = "auto";
+        html.classList.remove("logo-in-hero");
+        html.classList.add("logo-in-header");
+        var badgeRectRM = heroBadge.getBoundingClientRect();
+        var finalYRM = Math.max(
+          0,
+          Math.round(window.scrollY + badgeRectRM.top - headerH)
+        );
+        window.scrollTo({ top: finalYRM, left: 0, behavior: "instant" });
+        requestAnimationFrame(function () {
+          html.style.overflowAnchor = prevAnchorRM;
+          html.style.scrollBehavior = prevBehaviorRM;
+        });
+        return;
+      }
+
+      // Build a fixed-positioned clone that visually covers the hero logo
+      // at its current viewport location, then animate it to the header slot.
+      var clone = heroLogo.cloneNode(true);
+      clone.classList.add("logo-flight");
+      clone.removeAttribute("id");
+      clone.style.top = heroRect.top + "px";
+      clone.style.left = heroRect.left + "px";
+      clone.style.width = heroRect.width + "px";
+      clone.style.height = heroRect.height + "px";
+      document.body.appendChild(clone);
+
+      // Switch to the moving state (hides the original hero logo via CSS).
+      html.classList.remove("logo-in-hero");
+      html.classList.add("logo-moving");
+
+      // Kick off the smooth page scroll toward the hero-badge target.
+      window.scrollTo({ top: targetDocY, behavior: "smooth" });
+
+      // Two rAFs guarantee the clone's initial top/left are committed before
+      // the transform transition starts, so the browser animates from the
+      // current visual position rather than snapping.
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          var targetRect = headerLogo.getBoundingClientRect();
+          var scale = targetRect.height / heroRect.height;
+          var dx = targetRect.left - heroRect.left;
+          var dy = targetRect.top - heroRect.top;
+
+          clone.style.transition =
+            "transform 760ms cubic-bezier(0.65, 0, 0.35, 1)";
+          clone.style.transform =
+            "translate3d(" + dx + "px, " + dy + "px, 0) scale(" + scale + ")";
+
+          var finished = false;
+          function finish() {
+            if (finished) return;
+            finished = true;
+            clone.removeEventListener("transitionend", onEnd);
+
+            // Suppress scroll-behavior (CSS default is smooth) and scroll
+            // anchoring for this single mutation so the viewport lands on an
+            // exact pixel without any smooth animation or auto-compensation.
+            var prevAnchor = html.style.overflowAnchor;
+            var prevBehavior = html.style.scrollBehavior;
+            html.style.overflowAnchor = "none";
+            html.style.scrollBehavior = "auto";
+
+            // Flip to the final state. This triggers display:none on
+            // .hero-logo-wrap, so the document collapses by its height.
+            html.classList.remove("logo-moving");
+            html.classList.add("logo-in-header");
+
+            // Measure where .hero-badge sits NOW (after the layout change)
+            // and scroll so its top sits exactly under the sticky header.
+            // Using a live rect avoids any guesswork about wrap height or
+            // browser-specific scroll anchoring.
+            var headerH = header.getBoundingClientRect().height;
+            var badgeRectNow = heroBadge.getBoundingClientRect();
+            var finalY = Math.max(
+              0,
+              Math.round(window.scrollY + badgeRectNow.top - headerH)
+            );
+            window.scrollTo({ top: finalY, left: 0, behavior: "instant" });
+
+            requestAnimationFrame(function () {
+              html.style.overflowAnchor = prevAnchor;
+              html.style.scrollBehavior = prevBehavior;
+            });
+
+            if (clone.parentNode) clone.parentNode.removeChild(clone);
+          }
+          function onEnd(ev) {
+            if (ev && ev.propertyName && ev.propertyName !== "transform") return;
+            finish();
+          }
+          clone.addEventListener("transitionend", onEnd);
+          // Safety fallback in case transitionend is missed.
+          setTimeout(finish, 1400);
+        });
+      });
     }
 
     function onScroll() {
-      if (!ticking) {
-        window.requestAnimationFrame(function () {
-          update();
-          ticking = false;
-        });
-        ticking = true;
+      if (window.scrollY > 0) trigger();
+    }
+    function onIntent() {
+      trigger();
+    }
+    function onKey(e) {
+      var k = e.key;
+      if (
+        k === "ArrowDown" ||
+        k === "ArrowUp" ||
+        k === "PageDown" ||
+        k === "PageUp" ||
+        k === "End" ||
+        k === "Home" ||
+        k === " " ||
+        k === "Spacebar"
+      ) {
+        trigger();
       }
     }
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll, { passive: true });
-    update();
+    window.addEventListener("wheel", onIntent, { passive: true });
+    window.addEventListener("touchstart", onIntent, { passive: true });
+    window.addEventListener("touchmove", onIntent, { passive: true });
+    window.addEventListener("keydown", onKey);
   }
 
   function init() {
@@ -309,7 +474,7 @@
       });
     }
     setLang(getLang());
-    initHeroParallax();
+    initLogoTransition();
   }
 
   if (document.readyState === "loading") {
