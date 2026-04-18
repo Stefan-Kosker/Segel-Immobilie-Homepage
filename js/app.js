@@ -323,34 +323,14 @@
       window.removeEventListener("keydown", onKey);
 
       var heroRect = heroLogo.getBoundingClientRect();
-      var badgeRect = heroBadge.getBoundingClientRect();
-      var headerH = header.getBoundingClientRect().height;
-      var targetDocY = Math.max(
-        0,
-        Math.round(window.scrollY + badgeRect.top - headerH)
-      );
 
       // Reduced motion: snap straight to the final state (no clone, no
-      // animation). Apply the class change (removing hero-logo-wrap from
-      // flow), then measure the badge's new position and scroll so it lands
-      // under the header.
+      // animation). Apply the class change so .hero-logo-wrap is removed
+      // from flow; the browser's default scroll anchoring compensates the
+      // collapse, so we don't need to scroll the page ourselves.
       if (reduceMotion) {
-        var prevAnchorRM = html.style.overflowAnchor;
-        var prevBehaviorRM = html.style.scrollBehavior;
-        html.style.overflowAnchor = "none";
-        html.style.scrollBehavior = "auto";
         html.classList.remove("logo-in-hero");
         html.classList.add("logo-in-header");
-        var badgeRectRM = heroBadge.getBoundingClientRect();
-        var finalYRM = Math.max(
-          0,
-          Math.round(window.scrollY + badgeRectRM.top - headerH)
-        );
-        window.scrollTo({ top: finalYRM, left: 0, behavior: "instant" });
-        requestAnimationFrame(function () {
-          html.style.overflowAnchor = prevAnchorRM;
-          html.style.scrollBehavior = prevBehaviorRM;
-        });
         return;
       }
 
@@ -365,16 +345,27 @@
       clone.style.height = heroRect.height + "px";
       document.body.appendChild(clone);
 
+      // Pin the wrap's current size BEFORE switching to the moving state,
+      // so we have a concrete starting value to animate from. overflow is
+      // clipped so the (now visibility:hidden) image doesn't bleed out as
+      // the container shrinks.
+      var wrapStartH = heroWrap.getBoundingClientRect().height;
+      var wrapStartMB = getComputedStyle(heroWrap).marginBottom;
+      heroWrap.style.height = wrapStartH + "px";
+      heroWrap.style.overflow = "hidden";
+      heroWrap.style.marginBottom = wrapStartMB;
+
       // Switch to the moving state (hides the original hero logo via CSS).
       html.classList.remove("logo-in-hero");
       html.classList.add("logo-moving");
 
-      // Kick off the smooth page scroll toward the hero-badge target.
-      window.scrollTo({ top: targetDocY, behavior: "smooth" });
-
       // Two rAFs guarantee the clone's initial top/left are committed before
       // the transform transition starts, so the browser animates from the
-      // current visual position rather than snapping.
+      // current visual position rather than snapping. Same goes for the
+      // wrap's pinned starting height/margin, which we transition to 0 in
+      // lockstep with the clone -- so the content below "rises" into place
+      // at exactly the same rate as the logo flies into the header. No page
+      // scrolling is required, which means no jump-back can happen.
       requestAnimationFrame(function () {
         requestAnimationFrame(function () {
           var targetRect = headerLogo.getBoundingClientRect();
@@ -382,10 +373,19 @@
           var dx = targetRect.left - heroRect.left;
           var dy = targetRect.top - heroRect.top;
 
-          clone.style.transition =
-            "transform 760ms cubic-bezier(0.65, 0, 0.35, 1)";
+          var EASING = "cubic-bezier(0.65, 0, 0.35, 1)";
+          var DURATION_MS = 760;
+          var DURATION = DURATION_MS + "ms";
+
+          clone.style.transition = "transform " + DURATION + " " + EASING;
           clone.style.transform =
             "translate3d(" + dx + "px, " + dy + "px, 0) scale(" + scale + ")";
+
+          heroWrap.style.transition =
+            "height " + DURATION + " " + EASING +
+            ", margin-bottom " + DURATION + " " + EASING;
+          heroWrap.style.height = "0px";
+          heroWrap.style.marginBottom = "0px";
 
           var finished = false;
           function finish() {
@@ -393,35 +393,16 @@
             finished = true;
             clone.removeEventListener("transitionend", onEnd);
 
-            // Suppress scroll-behavior (CSS default is smooth) and scroll
-            // anchoring for this single mutation so the viewport lands on an
-            // exact pixel without any smooth animation or auto-compensation.
-            var prevAnchor = html.style.overflowAnchor;
-            var prevBehavior = html.style.scrollBehavior;
-            html.style.overflowAnchor = "none";
-            html.style.scrollBehavior = "auto";
-
-            // Flip to the final state. This triggers display:none on
-            // .hero-logo-wrap, so the document collapses by its height.
+            // Flip to the final state. logo-in-header sets display:none on
+            // .hero-logo-wrap, but the wrap is already height/margin 0 so
+            // there is no visual jump. Clear the inline styles afterwards
+            // so the element returns to a clean state.
             html.classList.remove("logo-moving");
             html.classList.add("logo-in-header");
-
-            // Measure where .hero-badge sits NOW (after the layout change)
-            // and scroll so its top sits exactly under the sticky header.
-            // Using a live rect avoids any guesswork about wrap height or
-            // browser-specific scroll anchoring.
-            var headerH = header.getBoundingClientRect().height;
-            var badgeRectNow = heroBadge.getBoundingClientRect();
-            var finalY = Math.max(
-              0,
-              Math.round(window.scrollY + badgeRectNow.top - headerH)
-            );
-            window.scrollTo({ top: finalY, left: 0, behavior: "instant" });
-
-            requestAnimationFrame(function () {
-              html.style.overflowAnchor = prevAnchor;
-              html.style.scrollBehavior = prevBehavior;
-            });
+            heroWrap.style.transition = "";
+            heroWrap.style.height = "";
+            heroWrap.style.marginBottom = "";
+            heroWrap.style.overflow = "";
 
             if (clone.parentNode) clone.parentNode.removeChild(clone);
           }
@@ -431,7 +412,7 @@
           }
           clone.addEventListener("transitionend", onEnd);
           // Safety fallback in case transitionend is missed.
-          setTimeout(finish, 1400);
+          setTimeout(finish, DURATION_MS + 640);
         });
       });
     }
