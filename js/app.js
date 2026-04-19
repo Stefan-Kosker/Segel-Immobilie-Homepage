@@ -1,7 +1,78 @@
 (function () {
   "use strict";
 
-  const STORAGE_KEY = "segel-lang";
+  function pathIndicatesEn() {
+    var path = window.location.pathname.replace(/\\/g, "/");
+    return path.indexOf("/en/") !== -1;
+  }
+
+  function getEffectiveLang() {
+    return pathIndicatesEn() ? "en" : "de";
+  }
+
+  function getAlternateLocaleUrl() {
+    var path = window.location.pathname.replace(/\\/g, "/");
+    var hash = window.location.hash || "";
+    var search = window.location.search || "";
+
+    if (path.indexOf("/en/") !== -1) {
+      return path.replace("/en/", "/") + search + hash;
+    }
+
+    if (
+      path === "/" ||
+      path === "" ||
+      path.endsWith("/") ||
+      /\/index\.html$/i.test(path)
+    ) {
+      var base = path.replace(/\/?index\.html$/i, "").replace(/\/$/, "");
+      return base + "/en/index.html" + search + hash;
+    }
+
+    if (path.indexOf("/leistungen/") !== -1) {
+      var idx = path.lastIndexOf("/leistungen/");
+      return path.slice(0, idx) + "/en" + path.slice(idx) + search + hash;
+    }
+
+    return path + search + hash;
+  }
+
+  function getMailContext() {
+    var c = document.body && document.body.getAttribute("data-mail-context");
+    if (c === "weg" || c === "miet" || c === "dl" || c === "bau") return c;
+    return "home";
+  }
+
+  function mailPackForContext(t, ctx) {
+    var map = {
+      home: {
+        sub: t.contactMailSubjectHome,
+        body: t.contactMailBodyHome,
+        cta: t.contactCtaHome,
+      },
+      weg: {
+        sub: t.pageWegMailSubject,
+        body: t.pageWegMailBody,
+        cta: t.pageWegContactCta,
+      },
+      miet: {
+        sub: t.pageMietMailSubject,
+        body: t.pageMietMailBody,
+        cta: t.pageMietContactCta,
+      },
+      dl: {
+        sub: t.pageDlMailSubject,
+        body: t.pageDlMailBody,
+        cta: t.pageDlContactCta,
+      },
+      bau: {
+        sub: t.pageBauMailSubject,
+        body: t.pageBauMailBody,
+        cta: t.pageBauContactCta,
+      },
+    };
+    return map[ctx] || map.home;
+  }
 
   const STRINGS = {
     de: {
@@ -24,6 +95,7 @@
       navLeistungDl: "Dienstleisterkoordination",
       navLeistungBau: "Baukoordination",
       brandTag: "Immobilienverwaltung & Koordination",
+      brandLogoAlt: "Segel Immoverwaltung — Logo",
       heroH1: "Verwaltung und Koordination, die entlasten und Struktur schaffen",
       heroLead:
         "Vier Schwerpunkte in Karlsruhe und der Region: Hausverwaltung (WEG), Mietverwaltung, Dienstleister- und Baukoordination — mit klaren Abläufen und festem Ansprechpartner.",
@@ -32,8 +104,8 @@
       carouselControlsAria: "Karussell steuern",
       carouselPrevAria: "Vorherige Leistung",
       carouselNextAria: "Nächste Leistung",
-      ctaPrimary: "Kontakt aufnehmen",
-      ctaSecondary: "Zum Einzugsgebiet",
+      ctaPrimary: "Kostenloses Erstgespräch für Ihre WEG anfragen",
+      ctaSecondary: "Verwaltungswechsel in 3 Schritten",
       pillarsTitle: "Was uns ausmacht",
       pillar1Title: "Entlastung",
       pillar1Text:
@@ -181,6 +253,25 @@
       step3Title: "Start & Kommunikation",
       step3Text:
         "Zum Start legen wir Zuständigkeiten und Kommunikationswege fest und kümmern uns um die geordnete Weiterführung laufender Verwaltungs- und Koordinationsthemen — etwa Hausgeld, Versicherungen, Termine und offene Maßnahmen.",
+      processQuickTitle: "Kurz & konkret zum Verwaltungswechsel",
+      processStepsBlurb:
+        "So läuft ein Wechsel in 3 Schritten: Erstgespräch und Bedarf klären → Unterlagen und laufende Vorgänge strukturiert übernehmen → Start mit festen Zuständigkeiten und klaren Kommunikationswegen.",
+      processDocsHeading: "Welche Unterlagen wir zuerst brauchen",
+      processDocsLi1:
+        "Letzte Jahresabrechnung, Wirtschaftsplan und aktuelle Hausgeldabrechnungen (sofern vorhanden)",
+      processDocsLi2:
+        "Protokolle der Eigentümerversammlungen, Beschlusssammlung, Teilungserklärung / Gemeinschaftsordnung",
+      processDocsLi3:
+        "Verträge zu Versicherungen, Hausmeister, Dienstleistern; offene Reparatur- und Schadensfälle in Kurzform",
+      processDaysHeading: "Was wir in den ersten 14 Tagen typischerweise übernehmen",
+      processDaysIntro:
+        "Direkt nach Start sorgen wir dafür, dass nichts liegen bleibt und alle Beteiligten wissen, wie es weitergeht:",
+      processDaysLi1:
+        "Erfassung der Dringlichkeiten: offene Maßnahmen, Fristen, wiederkehrende Zahlungen und laufende Schadens- oder Störungsfälle",
+      processDaysLi2:
+        "Abstimmung mit Beirat bzw. Ansprechpartnern: Zuständigkeiten, Erreichbarkeit und nächste organisatorische Schritte",
+      processDaysLi3:
+        "Saubere Priorisierung und Nachverfolgung der wichtigsten Verwaltungs- und Koordinationsthemen bis zur ersten Statusübersicht",
       faqTitle: "Häufige Fragen",
       faq1Q: "Wie schnell erreiche ich jemanden bei Dringlichem?",
       faq1A:
@@ -225,11 +316,93 @@
       contactPhoneDisplay: "07244 558 05 02",
       contactEmailDisplay: "kontakt@nomailyet.com",
       contactCtaClosing: "Haben wir Ihr Interesse geweckt?",
+      contactMicrocopy:
+        "Nehmen Sie unverbindlich Kontakt mit uns auf – telefonisch oder per E-Mail. Wir melden uns in der Regel innerhalb eines Werktags zurück und besprechen mit Ihnen, wie Ihr Anliegen am besten eingeordnet und weitergeführt werden kann. Für eine schnelle und gezielte Rückmeldung helfen uns einige kurze Angaben: um welches Objekt oder welche Gemeinschaft es geht, in welchem Ort sich die Immobilie befindet, welches Thema Sie beschäftigt und wann Sie gut erreichbar sind. So erhalten Sie ohne Umwege eine passende erste Einschätzung und einen klaren nächsten Schritt.",
       contactDrawerAria: "Kontakt — Telefon und E-Mail",
-      contactCta: "E-Mail vorbereiten",
-      contactMailSubject: "Anfrage Segel Immoverwaltung",
-      contactMailBody:
-        "Guten Tag,\n\nwir möchten Segel Immoverwaltung kontaktieren.\n\nLeistungsbereich (z. B. Hausverwaltung/WEG, Mietverwaltung, Dienstleister- oder Baukoordination):\nOrt / Objekt:\nAktuelles Thema (optional):\n\nMit freundlichen Grüßen",
+      contactCtaHome: "Unverbindliche Anfrage senden",
+      contactMailSubjectHome: "Anfrage: Erstgespräch — Segel Immoverwaltung",
+      contactMailBodyHome:
+        "Guten Tag,\n\nwir möchten ein unverbindliches Erstgespräch zur Hausverwaltung (WEG) anfragen.\n\nGemeinschaft / Objekt:\nOrt:\nKurz zum Anliegen (z. B. Verwaltungswechsel, Beratung):\nErreichbarkeit:\n\nMit freundlichen Grüßen",
+      mobileContactBarLabel: "Schnellkontakt",
+      mobileContactCall: "Anrufen",
+      mobileContactMail: "E-Mail",
+      mobileContactRequest: "Anfrage",
+      pageWegContactHook:
+        "Beirat entlasten und Verwaltungswechsel sauber übernehmen — wir klären Bedarf und nächste Schritte im Erstgespräch.",
+      pageWegContactCta: "Kostenloses Erstgespräch für Ihre WEG anfragen",
+      pageWegMailSubject: "Anfrage: Hausverwaltung (WEG) — Segel Immoverwaltung",
+      pageWegMailBody:
+        "Guten Tag,\n\nwir interessieren uns für die Hausverwaltung unserer WEG.\n\nObjekt / Gemeinschaft:\nOrt:\nAktuelles Thema (z. B. Verwaltungswechsel, Übernahme):\nErreichbarkeit:\n\nMit freundlichen Grüßen",
+      pageMietContactHook:
+        "Weniger operative Last im Mietalltag — wir strukturieren Verwaltung, Mieterkommunikation und kaufmännische Abläufe.",
+      pageMietContactCta: "Unverbindliche Anfrage zur Mietverwaltung senden",
+      pageMietMailSubject: "Anfrage: Mietverwaltung — Segel Immoverwaltung",
+      pageMietMailBody:
+        "Guten Tag,\n\nwir möchten die Mietverwaltung für unsere vermietete(n) Einheit(en) anfragen.\n\nObjekt / Adresse:\nAnzahl Einheiten / kurze Einordnung:\nAktuelles Thema:\nErreichbarkeit:\n\nMit freundlichen Grüßen",
+      pageDlContactHook:
+        "Handwerk, Hausmeister, Versorger — wir koordinieren Angebote, Termine und Nachverfolgung am Objekt.",
+      pageDlContactCta: "Anfrage zur Dienstleisterkoordination senden",
+      pageDlMailSubject: "Anfrage: Dienstleisterkoordination — Segel Immoverwaltung",
+      pageDlMailBody:
+        "Guten Tag,\n\nwir benötigen Unterstützung bei der Koordination von Dienstleistern am Objekt.\n\nObjekt / Adresse:\nArt des Bedarfs (z. B. Instandhaltung, Störung, mehrere Gewerke):\nErreichbarkeit:\n\nMit freundlichen Grüßen",
+      pageBauContactHook:
+        "Größere Maßnahmen begleiten wir mit Planung, Gewerkekoordination und nachvollziehbarer Dokumentation.",
+      pageBauContactCta: "Anfrage zur Baukoordination senden",
+      pageBauMailSubject: "Anfrage: Baukoordination — Segel Immoverwaltung",
+      pageBauMailBody:
+        "Guten Tag,\n\nwir planen oder führen eine größere Instandsetzungs- oder Sanierungsmaßnahme durch und suchen Koordination.\n\nObjekt / Adresse:\nArt / ungefährer Umfang der Maßnahme:\nZeitrahmen (falls bekannt):\nErreichbarkeit:\n\nMit freundlichen Grüßen",
+      pageWegFitHeading: "Passt das zu Ihrer Situation?",
+      pageWegFitYesTitle: "Geeignet für",
+      pageWegFitYes1:
+        "Wohnungseigentümergemeinschaften mit laufender oder geplanter professioneller Verwaltung",
+      pageWegFitYes2:
+        "Beiräte und Eigentümer, die operative Themen strukturiert abgeben möchten",
+      pageWegFitYes3:
+        "Gemeinschaften mit Verwaltungswechsel oder Bedarf an sauberer Übernahme",
+      pageWegFitNoTitle: "Weniger geeignet, wenn",
+      pageWegFitNo1:
+        "Sie ausschließlich einmalige Rechtsberatung oder Prozessvertretung suchen (hier sind Fachanwälte die richtige Adresse)",
+      pageWegFitNo2:
+        "es um Themen ohne Bezug zu verwalteten Objekten oder Gemeinschaften geht",
+      pageMietFitHeading: "Passt das zu Ihrer Situation?",
+      pageMietFitYesTitle: "Geeignet für",
+      pageMietFitYes1:
+        "Eigentümer vermieteter Wohn- oder Gewerbeeinheiten mit Verwaltungsbedarf im Alltag",
+      pageMietFitYes2:
+        "Objekte, bei denen Mieterkommunikation, Abrechnungen und Koordination entlastet werden sollen",
+      pageMietFitYes3:
+        "Eigentümer, die einen festen Ansprechpartner für organisatorische und kaufmännische Abläufe möchten",
+      pageMietFitNoTitle: "Weniger geeignet, wenn",
+      pageMietFitNo1:
+        "Sie ausschließlich rechtliche Auseinandersetzungen mit Mietern führen lassen möchten, ohne Verwaltungsbezug",
+      pageMietFitNo2:
+        "Sie keine verwaltete Immobilie im beschriebenen Sinne betreuen",
+      pageDlFitHeading: "Passt das zu Ihrer Situation?",
+      pageDlFitYesTitle: "Geeignet für",
+      pageDlFitYes1:
+        "Objekte mit mehreren Dienstleistern oder laufenden Koordinationsthemen (Handwerk, Hausmeister, Versorger)",
+      pageDlFitYes2:
+        "WEGs, Vermieter oder Verwalter, die Angebote, Termine und Nachverfolgung bündeln möchten",
+      pageDlFitYes3:
+        "Situationen, in denen Maßnahmen sonst liegen bleiben oder unklare Zuständigkeiten entstehen",
+      pageDlFitNoTitle: "Weniger geeignet, wenn",
+      pageDlFitNo1:
+        "Sie ausschließlich eine einzelne Kleinreparatur ohne laufende Koordination benötigen",
+      pageDlFitNo2:
+        "kein konkreter Bedarf an strukturierter Steuerung mehrerer Leistungserbringer besteht",
+      pageBauFitHeading: "Passt das zu Ihrer Situation?",
+      pageBauFitYesTitle: "Geeignet für",
+      pageBauFitYes1:
+        "Größere Instandsetzungs-, Sanierungs- oder Modernisierungsprojekte mit mehreren Gewerken",
+      pageBauFitYes2:
+        "WEGs oder Eigentümer, die Planung, Vergleich und Ausführung begleitet haben möchten",
+      pageBauFitYes3:
+        "Vorhaben, bei denen Fristen, Kosten und Dokumentation von vornherein klar bleiben sollen",
+      pageBauFitNoTitle: "Weniger geeignet, wenn",
+      pageBauFitNo1:
+        "Sie ausschließlich Architektur- oder Bauleitung durch einen externen Fachplaner ohne Verwaltungsbezug suchen",
+      pageBauFitNo2:
+        "es sich um sehr kleine Maßnahmen ohne Koordinationsbedarf handelt",
       imprintTitle: "Impressum",
       imprintPlaceholder:
         "Angaben gemäß gesetzlicher Pflicht (Anbieterkennzeichnung) werden vor Veröffentlichung der Website durch die Segel Immoverwaltung ergänzt. Bis dahin wenden Sie sich bitte direkt per E-Mail.",
@@ -262,6 +435,7 @@
       navLeistungDl: "Contractor coordination",
       navLeistungBau: "Construction coordination",
       brandTag: "Property management & coordination",
+      brandLogoAlt: "Segel Immoverwaltung — logo",
       heroH1: "Management and coordination that create relief and structure",
       heroLead:
         "Four focus areas in Karlsruhe and the region: building management (WEG), rental management, contractor and construction coordination — clear processes and a dedicated point of contact.",
@@ -270,8 +444,8 @@
       carouselControlsAria: "Carousel controls",
       carouselPrevAria: "Previous service",
       carouselNextAria: "Next service",
-      ctaPrimary: "Get in touch",
-      ctaSecondary: "Service area",
+      ctaPrimary: "Request a free initial call for your WEG",
+      ctaSecondary: "Changing managers in 3 steps",
       pillarsTitle: "What defines us",
       pillar1Title: "Relief",
       pillar1Text:
@@ -419,6 +593,25 @@
       step3Title: "Go-live & communication",
       step3Text:
         "At go-live we define responsibilities and communication channels and ensure the orderly continuation of ongoing administration and coordination topics — such as service charges, insurance, appointments and open measures.",
+      processQuickTitle: "Changing managers — the essentials",
+      processStepsBlurb:
+        "Three steps: clarify needs in an initial call → take over documents and ongoing cases in a structured way → start with clear responsibilities and communication paths.",
+      processDocsHeading: "Documents we need first",
+      processDocsLi1:
+        "Latest annual statement, economic plan and current service-charge statements (if available)",
+      processDocsLi2:
+        "Minutes of owners’ meetings, collection of resolutions, declaration of division / community rules",
+      processDocsLi3:
+        "Insurance contracts, caretaker and service contracts; a short summary of open repairs and claims",
+      processDaysHeading: "What we typically take on in the first 14 days",
+      processDaysIntro:
+        "Right after go-live we make sure nothing stalls and everyone knows what happens next:",
+      processDaysLi1:
+        "Capture priorities: open measures, deadlines, recurring payments and ongoing claims or faults",
+      processDaysLi2:
+        "Align with the advisory board or key contacts: responsibilities, availability and next organisational steps",
+      processDaysLi3:
+        "Sound prioritisation and follow-up on the most important administration and coordination topics until the first status overview",
       faqTitle: "Frequently asked questions",
       faq1Q: "How quickly can I reach someone in an urgent case?",
       faq1A:
@@ -463,11 +656,93 @@
       contactPhoneDisplay: "07244 558 05 02",
       contactEmailDisplay: "kontakt@nomailyet.com",
       contactCtaClosing: "Have we sparked your interest?",
+      contactMicrocopy:
+        "Please contact us on a non-binding basis — by phone or by email. We usually get back to you within one business day and discuss how your enquiry can best be understood and taken forward. For a quick, targeted reply, a few brief details help us: which property or owners’ association it concerns, where the property is located, what topic you would like to discuss, and when you are easy to reach. That way you receive an appropriate first assessment and a clear next step without unnecessary detours.",
       contactDrawerAria: "Contact — phone and email",
-      contactCta: "Prepare email",
-      contactMailSubject: "Inquiry: Segel Immoverwaltung",
-      contactMailBody:
-        "Hello,\n\nwe would like to contact Segel Immoverwaltung.\n\nService area (e.g. building/WEG management, rental management, contractor or construction coordination):\nLocation / property:\nCurrent topic (optional):\n\nKind regards",
+      contactCtaHome: "Send a non-binding inquiry",
+      contactMailSubjectHome: "Inquiry: initial call — Segel Immoverwaltung",
+      contactMailBodyHome:
+        "Hello,\n\nwe would like to request a non-binding initial call on building (WEG) management.\n\nAssociation / property:\nLocation:\nBrief note on your situation (e.g. changing managers, advice):\nHow to reach you:\n\nKind regards",
+      mobileContactBarLabel: "Quick contact",
+      mobileContactCall: "Call",
+      mobileContactMail: "Email",
+      mobileContactRequest: "Inquiry",
+      pageWegContactHook:
+        "Relieve the advisory board and manage a clean handover — we clarify needs and next steps in an initial call.",
+      pageWegContactCta: "Request a free initial call for your WEG",
+      pageWegMailSubject: "Inquiry: building management (WEG) — Segel Immoverwaltung",
+      pageWegMailBody:
+        "Hello,\n\nwe are interested in building management for our condominium association.\n\nProperty / association:\nLocation:\nCurrent topic (e.g. changing managers, takeover):\nHow to reach you:\n\nKind regards",
+      pageMietContactHook:
+        "Less day-to-day load in rental operations — we structure administration, tenant communication and commercial processes.",
+      pageMietContactCta: "Send a non-binding rental management inquiry",
+      pageMietMailSubject: "Inquiry: rental management — Segel Immoverwaltung",
+      pageMietMailBody:
+        "Hello,\n\nwe would like to inquire about rental management for our rented unit(s).\n\nProperty / address:\nNumber of units / brief context:\nCurrent topic:\nHow to reach you:\n\nKind regards",
+      pageDlContactHook:
+        "Trades, caretaker, utilities — we coordinate quotes, appointments and follow-up on site.",
+      pageDlContactCta: "Send a contractor coordination inquiry",
+      pageDlMailSubject: "Inquiry: contractor coordination — Segel Immoverwaltung",
+      pageDlMailBody:
+        "Hello,\n\nwe need support coordinating service providers at our property.\n\nProperty / address:\nType of need (e.g. maintenance, fault, several trades):\nHow to reach you:\n\nKind regards",
+      pageBauContactHook:
+        "We support larger projects with planning, trades coordination and traceable documentation.",
+      pageBauContactCta: "Send a construction coordination inquiry",
+      pageBauMailSubject: "Inquiry: construction coordination — Segel Immoverwaltung",
+      pageBauMailBody:
+        "Hello,\n\nwe are planning or carrying out a larger repair or refurbishment measure and are looking for coordination support.\n\nProperty / address:\nType / approximate scope:\nTimeline (if known):\nHow to reach you:\n\nKind regards",
+      pageWegFitHeading: "Is this a good fit?",
+      pageWegFitYesTitle: "A good fit if",
+      pageWegFitYes1:
+        "You represent a condominium association with ongoing or planned professional management",
+      pageWegFitYes2:
+        "The advisory board or owners want to hand off operational topics in a structured way",
+      pageWegFitYes3:
+        "You are changing managers or need a clean takeover of documents and cases",
+      pageWegFitNoTitle: "Less of a fit if",
+      pageWegFitNo1:
+        "You only need one-off legal advice or litigation (a qualified lawyer is the right contact)",
+      pageWegFitNo2:
+        "The matter has no link to a managed property or owners’ association",
+      pageMietFitHeading: "Is this a good fit?",
+      pageMietFitYesTitle: "A good fit if",
+      pageMietFitYes1:
+        "You own rented residential or commercial units and need day-to-day administration support",
+      pageMietFitYes2:
+        "You want tenant communication, statements and coordination handled with less friction",
+      pageMietFitYes3:
+        "You want a dedicated contact for organisational and commercial processes",
+      pageMietFitNoTitle: "Less of a fit if",
+      pageMietFitNo1:
+        "You only need legal disputes with tenants handled without any management scope",
+      pageMietFitNo2:
+        "You do not manage a property in the sense described above",
+      pageDlFitHeading: "Is this a good fit?",
+      pageDlFitYesTitle: "A good fit if",
+      pageDlFitYes1:
+        "The property has several service providers or ongoing coordination topics (trades, caretaker, utilities)",
+      pageDlFitYes2:
+        "WEGs, landlords or managers want quotes, appointments and follow-up bundled in one place",
+      pageDlFitYes3:
+        "Measures otherwise stall or responsibilities stay unclear",
+      pageDlFitNoTitle: "Less of a fit if",
+      pageDlFitNo1:
+        "You only need a one-off minor repair without ongoing coordination",
+      pageDlFitNo2:
+        "There is no real need to steer several providers in a structured way",
+      pageBauFitHeading: "Is this a good fit?",
+      pageBauFitYesTitle: "A good fit if",
+      pageBauFitYes1:
+        "You are planning larger repair, refurbishment or modernisation with several trades",
+      pageBauFitYes2:
+        "WEGs or owners want support for planning, comparison and execution",
+      pageBauFitYes3:
+        "Deadlines, costs and documentation should stay clear from the outset",
+      pageBauFitNoTitle: "Less of a fit if",
+      pageBauFitNo1:
+        "You only want architectural or site supervision by an external planner without a management link",
+      pageBauFitNo2:
+        "The job is very small with no coordination needs",
       imprintTitle: "Legal notice (Impressum)",
       imprintPlaceholder:
         "Mandatory provider details under German law will be added by Segel Immoverwaltung before the site goes live. Until then, please use email for direct contact.",
@@ -483,14 +758,11 @@
   };
 
   function getLang() {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === "en" || stored === "de") return stored;
-    return "de";
+    return getEffectiveLang();
   }
 
   function setLang(lang) {
     if (lang !== "en" && lang !== "de") return;
-    localStorage.setItem(STORAGE_KEY, lang);
     applyStrings(lang);
     document.documentElement.lang = lang;
     const toggle = document.getElementById("lang-toggle");
@@ -528,6 +800,7 @@
         if (attr) el.setAttribute(attr, value);
         return;
       }
+      if (el.id === "mailto-contact" || el.id === "mailto-contact-detail") return;
       el.textContent = value;
     });
 
@@ -537,8 +810,9 @@
     }
 
     const contactEmail = "kontakt@nomailyet.com";
-    const subj = encodeURIComponent(t.contactMailSubject);
-    const body = encodeURIComponent(t.contactMailBody);
+    const pack = mailPackForContext(t, getMailContext());
+    const subj = encodeURIComponent(pack.sub);
+    const body = encodeURIComponent(pack.body);
     const mailHref =
       "mailto:" + contactEmail + "?subject=" + subj + "&body=" + body;
     document
@@ -546,6 +820,11 @@
       .forEach(function (el) {
         el.href = mailHref;
       });
+
+    var primaryMailCta = document.getElementById("mailto-contact");
+    if (primaryMailCta && pack.cta) primaryMailCta.textContent = pack.cta;
+    var detailMailCta = document.getElementById("mailto-contact-detail");
+    if (detailMailCta && pack.cta) detailMailCta.textContent = pack.cta;
 
     const carousel = document.querySelector(".hero-carousel");
     if (carousel && t.carouselRoleDesc) {
@@ -1072,21 +1351,41 @@
     syncDrawerAria(header.classList.contains("is-nav-open"));
   }
 
+  function initMobileContactBar() {
+    var bar = document.querySelector(".mobile-contact-bar");
+    if (!bar) return;
+    var mq = window.matchMedia
+      ? window.matchMedia("(max-width: 900px)")
+      : { matches: true, addEventListener: function () {}, removeEventListener: function () {} };
+
+    function sync() {
+      bar.classList.toggle("is-visible", mq.matches);
+    }
+
+    if (mq.addEventListener) {
+      mq.addEventListener("change", sync);
+    } else if (mq.addListener) {
+      mq.addListener(sync);
+    }
+    sync();
+  }
+
   function init() {
     const toggle = document.getElementById("lang-toggle");
     if (toggle) {
       toggle.addEventListener("click", function () {
-        const next = getLang() === "de" ? "en" : "de";
-        setLang(next);
+        var url = getAlternateLocaleUrl();
+        if (url) window.location.href = url;
       });
     }
-    setLang(getLang());
+    setLang(getEffectiveLang());
     initLogoTransition();
     initHeroCarousel();
     initFaqAccordions();
     initNavDropdownOutsideClose();
     initMobileNav();
     initDetailParallax();
+    initMobileContactBar();
   }
 
   if (document.readyState === "loading") {

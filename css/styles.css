@@ -157,6 +157,13 @@ a:hover {
   margin-top: var(--space-md);
 }
 
+.steps li > strong {
+  display: block;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
 .step-body {
   margin: 0.5rem 0 0;
   color: var(--color-text-muted);
@@ -1208,8 +1215,8 @@ h3 {
   counter-increment: step;
   content: counter(step);
   position: absolute;
-  left: var(--space-md);
-  top: var(--space-md);
+  left: var(--space-lg);
+  top: var(--space-lg);
   width: 2rem;
   height: 2rem;
   display: flex;
@@ -1383,6 +1390,174 @@ h3 {
   font-weight: 600;
   line-height: 1.35;
   color: var(--color-text);
+}
+
+.contact-block__microcopy {
+  margin: 0 auto var(--space-md);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.process-promise {
+  margin: var(--space-lg) 0 var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.process-promise__title {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.process-promise__lead {
+  margin: 0 0 var(--space-lg);
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.process-promise__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+
+.process-promise__card h4 {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+
+.process-promise__intro {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.process-promise__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.process-promise__list li + li {
+  margin-top: 0.45rem;
+}
+
+@media (max-width: 800px) {
+  .process-promise__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fit-heading {
+  margin: 0 0 var(--space-md);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.fit-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.fit-col {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--color-border);
+}
+
+.fit-col--yes {
+  border-color: color-mix(in srgb, var(--color-accent) 22%, var(--color-border));
+}
+
+.fit-col h3 {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+
+.fit-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.fit-list li + li {
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 720px) {
+  .fit-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mobile-contact-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 160;
+  box-sizing: border-box;
+  align-items: stretch;
+  justify-content: stretch;
+  gap: 0.45rem;
+  padding: 0.5rem 0.65rem calc(0.55rem + env(safe-area-inset-bottom, 0px));
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -6px 28px rgba(20, 18, 24, 0.1);
+}
+
+.mobile-contact-bar.is-visible {
+  display: flex;
+}
+
+.mobile-contact-bar__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+}
+
+.mobile-contact-bar__btn--call {
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  border-color: color-mix(in srgb, var(--color-accent) 25%, var(--color-border));
+}
+
+.mobile-contact-bar__btn:hover {
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent);
+}
+
+body:has(.mobile-contact-bar.is-visible) {
+  padding-bottom: 4.75rem;
 }
 
 .nav-drawer__contact {
