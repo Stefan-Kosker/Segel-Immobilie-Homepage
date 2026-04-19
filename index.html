@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="WEG-Verwaltung mit klaren Prozessen: Abrechnung, Eigentümerversammlungen, Instandhaltung, Versicherungen. Einzugsgebiet Karlsruhe, Rhein-Neckar, Kraichgau und Umgebung."
+      data-i18n="metaDescription"
+      data-i18n-attr="content"
+      content="Hausverwaltung für WEGs, Mietverwaltung, Dienstleister- und Baukoordination mit klaren Prozessen. Einzugsgebiet Karlsruhe, Rhein-Neckar, Kraichgau und Umgebung."
     />
-    <title>Segel Immoverwaltung — WEG-Verwaltung Karlsruhe & Region</title>
+    <title data-i18n="metaTitle">Segel Immoverwaltung — Hausverwaltung &amp; Koordination Karlsruhe &amp; Region</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,18 +44,54 @@
           />
           <span class="brand-text">
             <span class="brand-name">Segel Immoverwaltung</span>
-            <span class="brand-tag" data-i18n="brandTag">WEG-Verwaltung</span>
+            <span class="brand-tag" data-i18n="brandTag">Immobilienverwaltung &amp; Koordination</span>
           </span>
         </a>
         <div class="header-actions">
-          <nav class="site-nav" data-i18n-attr="aria-label" data-i18n="navAria" aria-label="Hauptnavigation">
-            <a href="#leistungen" data-i18n="navServices">Leistungen</a>
-            <a href="#region" data-i18n="navRegion">Region</a>
-            <a href="#ablauf" data-i18n="navProcess">Verwaltungswechsel</a>
-            <a href="#faq" data-i18n="navFaq">FAQ</a>
-            <a href="#kontakt" data-i18n="navContact">Kontakt</a>
-            <a href="#impressum" data-i18n="navImprint">Impressum</a>
-          </nav>
+          <div class="nav-drawer-backdrop" aria-hidden="true"></div>
+          <div class="nav-drawer" id="site-nav-drawer">
+            <nav class="site-nav" data-i18n-attr="aria-label" data-i18n="navAria" aria-label="Hauptnavigation">
+              <details class="nav-dropdown">
+                <summary class="nav-dropdown__summary">
+                  <span data-i18n="navServices">Leistungen</span>
+                </summary>
+                <div
+                  class="nav-dropdown__panel"
+                  data-i18n-attr="aria-label"
+                  data-i18n="navAriaSubmenuLeistungen"
+                  aria-label="Leistungen — Untermenü"
+                >
+                  <ul role="list">
+                    <li>
+                      <a href="leistungen/weg-verwaltung.html" data-i18n="navLeistungWeg"
+                        >Hausverwaltung (WEG)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="leistungen/mietverwaltung.html" data-i18n="navLeistungMiet"
+                        >Mietverwaltung</a
+                      >
+                    </li>
+                    <li>
+                      <a href="leistungen/dienstleisterkoordination.html" data-i18n="navLeistungDl"
+                        >Dienstleisterkoordination</a
+                      >
+                    </li>
+                    <li>
+                      <a href="leistungen/baukoordination.html" data-i18n="navLeistungBau"
+                        >Baukoordination</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <a href="#region" data-i18n="navRegion">Region</a>
+              <a href="#ablauf" data-i18n="navProcess">Verwaltungswechsel</a>
+              <a href="#faq" data-i18n="navFaq">FAQ</a>
+              <a href="#kontakt" data-i18n="navContact">Kontakt</a>
+              <a href="#impressum" data-i18n="navImprint">Impressum</a>
+            </nav>
+          </div>
           <a class="btn btn--header-cta" href="#kontakt" data-i18n="navContact">Kontakt</a>
           <div class="lang-switch-wrap">
             <span class="visually-hidden" data-i18n="langToggle" id="lang-switch-label"
@@ -72,6 +110,17 @@
               <span id="lang-badge">DE</span>
             </button>
           </div>
+          <button
+            type="button"
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-expanded="false"
+            aria-controls="site-nav-drawer"
+            data-i18n="navOpenMenu"
+            data-i18n-attr="aria-label"
+          >
+            <span class="nav-toggle__bars" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
     </header>
@@ -92,57 +141,242 @@
           </p>
           <div class="hero-split">
             <div class="hero-copy">
-              <p class="hero-badge" data-i18n="brandTag">WEG-Verwaltung</p>
+              <p class="hero-badge" data-i18n="brandTag">Immobilienverwaltung &amp; Koordination</p>
               <h1 id="hero-heading" data-i18n="heroH1">
-                WEG-Verwaltung, die entlastet und Struktur schafft
+                Verwaltung und Koordination, die entlasten und Struktur schaffen
               </h1>
               <p class="hero-lead" data-i18n="heroLead">
-                Für WEGs in Karlsruhe und der Region: klare Abläufe, saubere
-                Abrechnung, gut vorbereitete Versammlungen — mit festem
-                Ansprechpartner.
+                Vier Schwerpunkte in Karlsruhe und der Region: Hausverwaltung (WEG),
+                Mietverwaltung, Dienstleister- und Baukoordination — mit klaren
+                Abläufen und festem Ansprechpartner.
               </p>
               <div class="hero-cta">
                 <a class="btn btn--primary" href="#kontakt" data-i18n="ctaPrimary"
                   >Kontakt aufnehmen</a
                 >
-                <a class="btn btn--ghost" href="#leistungen" data-i18n="ctaSecondary"
-                  >Leistungen ansehen</a
+                <a class="btn btn--ghost" href="#region" data-i18n="ctaSecondary"
+                  >Zum Einzugsgebiet</a
                 >
               </div>
             </div>
-            <figure class="hero-figure">
-              <div class="hero-photo-frame">
-                <img
-                  class="hero-photo"
-                  src="images/photos/hero-wohnen.jpg"
-                  width="1400"
-                  height="934"
-                  loading="eager"
-                  decoding="async"
-                  fetchpriority="high"
-                  data-i18n="heroImgAlt"
-                  data-i18n-attr="alt"
-                  alt="Modernes Wohngebäude (Symbolbild)"
-                />
-              </div>
-              <figcaption class="photo-credit">
-                <span data-i18n="photoCreditPre">Foto:</span>
-                <a
-                  href="https://unsplash.com/photos/be6161a56a0c?utm_source=segel-immobilie-homepage&utm_medium=referral"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Unsplash</a
+            <div
+              class="hero-carousel"
+              id="leistungen"
+              role="region"
+              aria-labelledby="carousel-leistungen-heading"
+            >
+              <h2
+                class="hero-carousel__heading"
+                id="carousel-leistungen-heading"
+                data-i18n="carouselLeistungenHeading"
+              >
+                Unsere Leistungen
+              </h2>
+              <div class="hero-carousel__viewport">
+                <ul class="hero-carousel__track" id="hero-carousel-track">
+                  <li class="hero-carousel__slide" id="hero-carousel-slide-0" data-slide="0">
+                    <div class="hero-carousel__card">
+                      <div class="hero-carousel__media">
+                        <img
+                          class="hero-carousel__img"
+                          src="images/carousel-images/versammlung.jpg"
+                          width="1600"
+                          height="1067"
+                          loading="eager"
+                          decoding="async"
+                          fetchpriority="high"
+                          data-i18n="pageWegImgAlt"
+                          data-i18n-attr="alt"
+                          alt=""
+                        />
+                      </div>
+                      <div class="hero-carousel__caption">
+                        <span class="hero-carousel__title" data-i18n="leistungTeaserWegTitle"
+                          >Hausverwaltung (WEG)</span
+                        >
+                        <a
+                          class="hero-carousel__more"
+                          href="leistungen/weg-verwaltung.html"
+                          data-i18n="leistungTeaserCta"
+                          >Mehr erfahren</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li class="hero-carousel__slide" id="hero-carousel-slide-1" data-slide="1">
+                    <div class="hero-carousel__card">
+                      <div class="hero-carousel__media">
+                        <img
+                          class="hero-carousel__img"
+                          src="images/carousel-images/Mietverwaltung.png"
+                          width="1600"
+                          height="1067"
+                          loading="lazy"
+                          decoding="async"
+                          data-i18n="pageMietImgAlt"
+                          data-i18n-attr="alt"
+                          alt=""
+                        />
+                      </div>
+                      <div class="hero-carousel__caption">
+                        <span class="hero-carousel__title" data-i18n="leistungTeaserMietTitle"
+                          >Mietverwaltung</span
+                        >
+                        <a
+                          class="hero-carousel__more"
+                          href="leistungen/mietverwaltung.html"
+                          data-i18n="leistungTeaserCta"
+                          >Mehr erfahren</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li class="hero-carousel__slide" id="hero-carousel-slide-2" data-slide="2">
+                    <div class="hero-carousel__card">
+                      <div class="hero-carousel__media">
+                        <img
+                          class="hero-carousel__img"
+                          src="images/carousel-images/dienstleisterkoordination.png"
+                          width="1600"
+                          height="1067"
+                          loading="lazy"
+                          decoding="async"
+                          data-i18n="pageDlImgAlt"
+                          data-i18n-attr="alt"
+                          alt=""
+                        />
+                      </div>
+                      <div class="hero-carousel__caption">
+                        <span class="hero-carousel__title" data-i18n="leistungTeaserDlTitle"
+                          >Dienstleisterkoordination</span
+                        >
+                        <a
+                          class="hero-carousel__more"
+                          href="leistungen/dienstleisterkoordination.html"
+                          data-i18n="leistungTeaserCta"
+                          >Mehr erfahren</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li class="hero-carousel__slide" id="hero-carousel-slide-3" data-slide="3">
+                    <div class="hero-carousel__card">
+                      <div class="hero-carousel__media">
+                        <img
+                          class="hero-carousel__img"
+                          src="images/carousel-images/baustelle.png"
+                          width="1600"
+                          height="1067"
+                          loading="lazy"
+                          decoding="async"
+                          data-i18n="pageBauImgAlt"
+                          data-i18n-attr="alt"
+                          alt=""
+                        />
+                      </div>
+                      <div class="hero-carousel__caption">
+                        <span class="hero-carousel__title" data-i18n="leistungTeaserBauTitle"
+                          >Baukoordination</span
+                        >
+                        <a
+                          class="hero-carousel__more"
+                          href="leistungen/baukoordination.html"
+                          data-i18n="leistungTeaserCta"
+                          >Mehr erfahren</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div
+                  class="hero-carousel__chrome"
+                  role="group"
+                  data-i18n="carouselControlsAria"
+                  data-i18n-attr="aria-label"
+                  aria-label="Karussell"
                 >
-                <span data-i18n="photoCreditPost">(Symbolbild)</span>
-              </figcaption>
-            </figure>
+                  <button
+                    type="button"
+                    class="hero-carousel__btn hero-carousel__btn--prev"
+                    id="hero-carousel-prev"
+                    aria-controls="hero-carousel-track"
+                    data-i18n="carouselPrevAria"
+                    data-i18n-attr="aria-label"
+                    aria-label="Vorherige Leistung"
+                  >
+                    <span aria-hidden="true">‹</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="hero-carousel__btn hero-carousel__btn--next"
+                    id="hero-carousel-next"
+                    aria-controls="hero-carousel-track"
+                    data-i18n="carouselNextAria"
+                    data-i18n-attr="aria-label"
+                    aria-label="Nächste Leistung"
+                  >
+                    <span aria-hidden="true">›</span>
+                  </button>
+                  <div class="hero-carousel__dots" id="hero-carousel-dots">
+                    <button
+                      type="button"
+                      class="hero-carousel__dot is-active"
+                      aria-current="true"
+                      aria-controls="hero-carousel-slide-0"
+                      id="hero-carousel-dot-0"
+                      data-slide-to="0"
+                    >
+                      <span class="visually-hidden" data-i18n="leistungTeaserWegTitle"
+                        >Hausverwaltung (WEG)</span
+                      >
+                    </button>
+                    <button
+                      type="button"
+                      class="hero-carousel__dot"
+                      aria-current="false"
+                      aria-controls="hero-carousel-slide-1"
+                      id="hero-carousel-dot-1"
+                      data-slide-to="1"
+                    >
+                      <span class="visually-hidden" data-i18n="leistungTeaserMietTitle"
+                        >Mietverwaltung</span
+                      >
+                    </button>
+                    <button
+                      type="button"
+                      class="hero-carousel__dot"
+                      aria-current="false"
+                      aria-controls="hero-carousel-slide-2"
+                      id="hero-carousel-dot-2"
+                      data-slide-to="2"
+                    >
+                      <span class="visually-hidden" data-i18n="leistungTeaserDlTitle"
+                        >Dienstleisterkoordination</span
+                      >
+                    </button>
+                    <button
+                      type="button"
+                      class="hero-carousel__dot"
+                      aria-current="false"
+                      aria-controls="hero-carousel-slide-3"
+                      id="hero-carousel-dot-3"
+                      data-slide-to="3"
+                    >
+                      <span class="visually-hidden" data-i18n="leistungTeaserBauTitle"
+                        >Baukoordination</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="werte" aria-labelledby="pillars-heading">
         <div class="section-inner">
-          <h2 id="pillars-heading" data-i18n="pillarsTitle">Worauf es ankommt</h2>
+          <h2 id="pillars-heading" data-i18n="pillarsTitle">Was uns ausmacht</h2>
           <div class="pillars">
             <article class="pillar">
               <div class="pillar-head">
@@ -157,8 +391,8 @@
                 <h3 data-i18n="pillar1Title">Entlastung</h3>
               </div>
               <p data-i18n="pillar1Text">
-                Weniger operative Last auf dem Beirat: Aufgaben werden strukturiert
-                übernommen.
+                Wir übernehmen operative Aufgaben strukturiert und zuverlässig – damit
+                Beirat und Eigentümergemeinschaft spürbar entlastet werden.
               </p>
             </article>
             <article class="pillar">
@@ -171,27 +405,11 @@
                   alt=""
                   decoding="async"
                 />
-                <h3 data-i18n="pillar2Title">Ordnung</h3>
+                <h3 data-i18n="pillar2Title">Ordnung &amp; Transparenz</h3>
               </div>
               <p data-i18n="pillar2Text">
-                Klare Abläufe, Fristen und Dokumentation statt Papierchaos.
-              </p>
-            </article>
-            <article class="pillar">
-              <div class="pillar-head">
-                <img
-                  class="pillar-icon"
-                  src="images/icons/pillar-sicherheit.svg"
-                  width="44"
-                  height="44"
-                  alt=""
-                  decoding="async"
-                />
-                <h3 data-i18n="pillar3Title">Sicherheit</h3>
-              </div>
-              <p data-i18n="pillar3Text">
-                Sorgfältiger Umgang mit Hausgeld, Verträgen und Versicherungen — ohne
-                Rechtsberatung zu versprechen, wo sie nicht unsere Rolle ist.
+                Klare Abläufe, Fristen und eine nachvollziehbare Dokumentation schaffen
+                Struktur und reduzieren unnötige Rückfragen.
               </p>
             </article>
             <article class="pillar">
@@ -204,10 +422,11 @@
                   alt=""
                   decoding="async"
                 />
-                <h3 data-i18n="pillar4Title">Verlässlichkeit</h3>
+                <h3 data-i18n="pillar3Title">Verlässlichkeit</h3>
               </div>
-              <p data-i18n="pillar4Text">
-                Fristen im Blick; Beschlüsse werden umgesetzt, nicht nur protokolliert.
+              <p data-i18n="pillar3Text">
+                Fristen bleiben im Blick, Beschlüsse werden sauber nachverfolgt und
+                vereinbarte Maßnahmen zuverlässig umgesetzt.
               </p>
             </article>
             <article class="pillar">
@@ -220,135 +439,12 @@
                   alt=""
                   decoding="async"
                 />
-                <h3 data-i18n="pillar5Title">Weniger Konflikte</h3>
+                <h3 data-i18n="pillar4Title">Ruhigere Zusammenarbeit</h3>
               </div>
-              <p data-i18n="pillar5Text">
-                Transparente Kommunikation und klare Moderation reduzieren Reibung.
-              </p>
-            </article>
-            <article class="pillar">
-              <div class="pillar-head">
-                <img
-                  class="pillar-icon"
-                  src="images/icons/pillar-aussenwirkung.svg"
-                  width="44"
-                  height="44"
-                  alt=""
-                  decoding="async"
-                />
-                <h3 data-i18n="pillar6Title">Professionelle Außenwirkung</h3>
-              </div>
-              <p data-i18n="pillar6Text">
-                Eine seriöse Anlaufstelle gegenüber Mietern, Versicherern und Handwerkern.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--tight" id="leistungen" aria-labelledby="services-heading">
-        <div class="section-inner">
-          <h2 id="services-heading" data-i18n="servicesTitle">
-            Was wir konkret für Ihre WEG übernehmen
-          </h2>
-          <p class="lead-muted" data-i18n="servicesLead">
-            Klar, strukturiert und verständlich — ohne unnötiges Fachchinesisch.
-          </p>
-          <div class="card-grid">
-            <article class="card">
-              <div class="card-head">
-                <img
-                  class="card-icon"
-                  src="images/icons/svc-abrechnung.svg"
-                  width="44"
-                  height="44"
-                  alt=""
-                  decoding="async"
-                />
-                <h3 data-i18n="svcAccountingTitle">Abrechnung &amp; Finanzplanung</h3>
-              </div>
-              <p data-i18n="svcAccountingItems">
-                Jahresabrechnungen, Wirtschaftspläne, Hausgeld und alle wichtigen kaufmännischen Grundlagen — transparent und gut nachvollziehbar, bei Bedarf in Abstimmung mit dem Steuerberater.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-head">
-                <img
-                  class="card-icon"
-                  src="images/icons/svc-versammlung.svg"
-                  width="44"
-                  height="44"
-                  alt=""
-                  decoding="async"
-                />
-                <h3 data-i18n="svcMeetingsTitle">Eigentümerversammlungen</h3>
-              </div>
-              <p data-i18n="svcMeetingsItems">
-                Einberufung, Tagesordnung, Vorbereitung, Protokollierung, Beschlussvorlagen und die zuverlässige Umsetzung gefasster Beschlüsse.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-head">
-                <img
-                  class="card-icon"
-                  src="images/icons/svc-instandhaltung.svg"
-                  width="44"
-                  height="44"
-                  alt=""
-                  decoding="async"
-                />
-                <h3 data-i18n="svcMaintenanceTitle">Instandhaltung &amp; Handwerkerkoordination</h3>
-              </div>
-              <p data-i18n="svcMaintenanceItems">
-                Organisation von Reparaturen und Instandhaltungsmaßnahmen, Einholung von Angeboten und Abstimmung im Rahmen von Beschlüssen und Budget — mit einem bewährten Netzwerk zuverlässiger Handwerksbetriebe.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-head">
-                <img
-                  class="card-icon"
-                  src="images/icons/svc-versicherung.svg"
-                  width="44"
-                  height="44"
-                  alt=""
-                  decoding="async"
-                />
-                <h3 data-i18n="svcInsuranceTitle">Versicherungen &amp; Schadensfälle</h3>
-              </div>
-              <p data-i18n="svcInsuranceItems">
-                Begleitung bei Versicherungsfragen und Schäden, Koordination der nächsten Schritte und saubere Dokumentation des gesamten Vorgangs.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-head">
-                <img
-                  class="card-icon"
-                  src="images/icons/svc-formalitaeten.svg"
-                  width="44"
-                  height="44"
-                  alt=""
-                  decoding="async"
-                />
-                <h3 data-i18n="svcOrgTitle">Organisation &amp; Dienstleister</h3>
-              </div>
-              <p data-i18n="svcOrgItems">
-                Abstimmung mit Hausmeistern, Handwerksbetrieben, Versorgern und weiteren Partnern, damit Abläufe reibungslos und zuverlässig funktionieren.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-head">
-                <img
-                  class="card-icon"
-                  src="images/icons/pillar-aussenwirkung.svg"
-                  width="44"
-                  height="44"
-                  alt=""
-                  decoding="async"
-                />
-                <h3 data-i18n="svcCommTitle">Kommunikation &amp; Betreuung</h3>
-              </div>
-              <p data-i18n="svcCommItems">
-                Verlässliche Kommunikation mit Eigentümern, Beirat und Dienstleistern — digital, postalisch und telefonisch. Auch bei unterschiedlichem Abstimmungsbedarf innerhalb der WEG sorgen wir für eine sachliche, diplomatische und lösungsorientierte Begleitung.
+              <p data-i18n="pillar4Text">
+                Klare Kommunikation und eine sachliche, diplomatische Begleitung sorgen für
+                mehr Transparenz und weniger Reibung — in der Gemeinschaft, im Mietalltag und
+                bei Koordination am Objekt.
               </p>
             </article>
           </div>
@@ -378,25 +474,31 @@
             So läuft der Verwaltungswechsel
           </h2>
           <p class="lead-muted" data-i18n="processLead">
-            Verwaltungswechsel strukturiert begleiten — damit nichts verloren geht.
+            Wir begleiten den Wechsel strukturiert und sorgen für einen geordneten,
+            reibungslosen Übergang.
           </p>
           <ol class="steps">
             <li>
               <strong data-i18n="step1Title">Erstgespräch &amp; Bedarf</strong>
               <p class="step-body" data-i18n="step1Text">
-                Kurz klären: WEG-Größe, Themen, Erreichbarkeit, Ansprechpartner.
+                Zu Beginn klären wir die wichtigsten Eckpunkte – etwa Objekt oder Gemeinschaft,
+                Umfang, aktuelle Themen, Ansprechpartner und Erreichbarkeit.
               </p>
             </li>
             <li>
-              <strong data-i18n="step2Title">Unterlagen &amp; Übergabe</strong>
+              <strong data-i18n="step2Title">Unterlagen &amp; Übernahme</strong>
               <p class="step-body" data-i18n="step2Text">
-                Akten und laufende Vorgänge strukturiert übernehmen — mit Checkliste.
+                Wir übernehmen die vorhandenen Unterlagen und laufenden Vorgänge
+                strukturiert und nachvollziehbar – mit klarem Blick auf Vollständigkeit und
+                offene Themen.
               </p>
             </li>
             <li>
               <strong data-i18n="step3Title">Start &amp; Kommunikation</strong>
               <p class="step-body" data-i18n="step3Text">
-                Kommunikationskanäle festlegen; Start mit Hausgeld, Versicherung, Terminen.
+                Zum Start legen wir Zuständigkeiten und Kommunikationswege fest und kümmern uns
+                um die geordnete Weiterführung laufender Verwaltungs- und Koordinationsthemen —
+                etwa Hausgeld, Versicherungen, Termine und offene Maßnahmen.
               </p>
             </li>
           </ol>
@@ -434,7 +536,7 @@
             <details>
               <summary data-i18n="faq5Q">Ersetzt die Verwaltung Rechts- oder Steuerberatung?</summary>
               <p data-i18n="faq5A">
-                Nein, die WEG-Verwaltung ersetzt keine Rechts- oder Steuerberatung. Wir kümmern uns um die ordnungsgemäße Verwaltung Ihrer Gemeinschaft und arbeiten bei speziellen rechtlichen oder steuerlichen Fragestellungen bei Bedarf mit den zuständigen Fachleuten zusammen. So ist sichergestellt, dass Ihre WEG in jedem Bereich passend betreut wird.
+                Nein, die Hausverwaltung ersetzt keine Rechts- oder Steuerberatung. Wir kümmern uns um die ordnungsgemäße Verwaltung Ihrer Gemeinschaft und arbeiten bei speziellen rechtlichen oder steuerlichen Fragestellungen bei Bedarf mit den zuständigen Fachleuten zusammen. So ist sichergestellt, dass Ihre WEG in jedem Bereich passend betreut wird.
               </p>
             </details>
             <details>
@@ -500,7 +602,7 @@
             <a
               class="btn btn--primary"
               id="mailto-contact"
-              href="mailto:?subject=Anfrage%20WEG-Verwaltung&amp;body="
+              href="mailto:?subject=Anfrage%20Segel%20Immoverwaltung&amp;body="
               data-i18n="contactCta"
               >E-Mail vorbereiten</a
             >
@@ -514,7 +616,7 @@
         <div class="footer-grid">
           <div>
             <strong data-i18n="footerCompany">Segel Immoverwaltung</strong>
-            <p class="footer-brand-sub" data-i18n="brandTag">WEG-Verwaltung</p>
+            <p class="footer-brand-sub" data-i18n="brandTag">Immobilienverwaltung &amp; Koordination</p>
           </div>
           <div>
             <h2 class="imprint-footer-h2" data-i18n="imprintTitle">Impressum</h2>

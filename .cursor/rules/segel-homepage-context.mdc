@@ -9,7 +9,7 @@ Before planning, editing, or generating code or copy in this repository:
 
 1. **Read and follow** the root file **`PROJECT_CONTEXT.md`** (company, positioning, persona, SEO/AIO, design goals, target locations). Treat it as the source of truth unless the user overrides it in chat.
 
-2. **Do not** invent legal claims, fake testimonials, or service areas not confirmed there.
+2. **Do not** invent legal claims, fake testimonials, or service areas not confirmed there. On the website, **no single Leistung** is positioned as the sole “main” mandate — treat **Hausverwaltung (WEG), Mietverwaltung, Dienstleisterkoordination and Baukoordination** as **equally primary** unless the client overrides in chat. Prefer **Hausverwaltung** over “WEG-Verwaltung” in user-facing copy for SEO (see `PROJECT_CONTEXT.md`).
 
 3. **Implementation style** (when building the site): modern, responsive, parallax/animations with respect for `prefers-reduced-motion`; German copy aligned with the persona and value pillars (Entlastung, Ordnung, Sicherheit, Verlässlichkeit, weniger Konflikte, professionelle Außenwirkung).
 

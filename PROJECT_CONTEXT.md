@@ -9,11 +9,12 @@ Use this document as the single source of truth for scope, tone, SEO, and UX whe
 | Field | Value |
 |--------|--------|
 | **Company name** | Segel Immoverwaltung |
-| **Legal positioning** | WEG-Verwaltung (Verwalter für Wohnungseigentümergemeinschaften) |
+| **Main service portfolio (website)** | **Four equal pillars** — no single area is positioned as the only “main” mandate: **Hausverwaltung (WEG)**, **Mietverwaltung**, **Dienstleisterkoordination**, **Baukoordination**. |
+| **Legal positioning** | Immobilienverwaltung und Koordination; u. a. Verwalterleistungen für Wohnungseigentümergemeinschaften (WEG). **Concrete legal titles, registrations and mandatory disclosures belong in the Impressum / client-approved legal text — do not invent them here.** |
 | **Primary language** | German (Sie-Anrede for business; warm-professional, not stiff) |
 
 **What we do (substance, not buzzwords):**  
-Professionelle **WEG-Verwaltung**: Jahresabrechnung und Wirtschaftspläne, Eigentümerversammlungen (Einberufung, Vorbereitung, Protokoll), Beschlussumsetzung, Instandhaltung und Handwerkerkoordination, Versicherungen und Schadensfälle, Hausgeld, Archiv/Unterlagen, Schnittstelle zu Steuerberater/Recht — always described in **plain, concrete** terms.
+**Hausverwaltung (WEG):** Jahresabrechnung und Wirtschaftspläne, Eigentümerversammlungen (Einberufung, Vorbereitung, Protokoll), Beschlussumsetzung, Instandhaltung und Handwerkerkoordination, Versicherungen und Schadensfälle, Hausgeld, Archiv/Unterlagen, Schnittstelle zu Steuerberater/Recht. **Mietverwaltung:** laufende kaufmännische und organisatorische Betreuung vermieteter Einheiten, Abstimmung mit Mietern im vereinbarten Rahmen. **Dienstleisterkoordination:** Bündelung von Anfragen, Angebote, Termine, Nachverfolgung und Dokumentation gegenüber Handwerk und weiteren Partnern. **Baukoordination:** strukturierte Begleitung größerer Instandsetzungs- und Sanierungsmaßnahmen. Always described in **plain, concrete** terms.
 
 ---
 
@@ -26,23 +27,25 @@ The site must **not** sell “only administration.” It sells outcomes:
 3. **Sicherheit** — Compliance-oriented handling of money, contracts, insurance, and legal formalities (without promising legal advice unless qualified).  
 4. **Verlässlichkeit** — Predictable response times, deadlines met, resolutions actually implemented.  
 5. **Weniger Konflikte** — Professional moderation, transparent communication, fewer misunderstandings between owners.  
-6. **Professionelle Außenwirkung** — The WEG appears competent to tenants, insurers, authorities, and contractors; one serious point of contact.
+6. **Professionelle Außenwirkung** — Owners, tenants, insurers, authorities and contractors encounter one serious point of contact; the property is represented competently.
 
-**Tagline direction (examples, not final):** combine “WEG-Verwaltung” with one outcome word (e.g. Verwaltung, die **entlastet** / **Struktur schafft**).
+**Tagline direction (examples, not final):** combine the **company name** or **“Immobilienverwaltung & Koordination”** with one outcome word (e.g. Verwaltung, die **entlastet** / **Struktur schafft**); hero and SEO may name **all four** service areas plus region without elevating one above the others.
 
 ---
 
 ## 3. Target persona (primary)
+
+The site speaks **equally** to clients interested in any of the four main areas. **Sabine Krüger** below is a **concrete illustrative persona** for the WEG track (still a major search and referral path); copy for Mietverwaltung and Koordination should be equally concrete for those audiences where separate landing content exists.
 
 **Sabine Krüger — typische WEG-Beiratsvorsitzende / aktive Eigentümerin**
 
 - ~52, apartment owner ~9 years, **~18 WE**, chair of advisory board; medium-sized city or suburb; middle management; time-poor.  
 - **Traits:** organized, responsible, practical, solution-oriented; skeptical of empty sales promises.  
 - **Pain:** slow/missing replies, bad meeting prep, delayed repairs, late/inaccurate annual accounts, no ownership from current Verwalter, reactive chaos.  
-- **Goals:** responsive, professional, **proactive** WEG-Verwaltung; clear communication; proper meeting support; reliable implementation; accurate accounting on time; less friction in the community.  
+- **Goals:** responsive, professional, **proactive** Hausverwaltung; clear communication; proper meeting support; reliable implementation; accurate accounting on time; less friction in the community.  
 - **Buying:** relief, order, trust, predictability, less personal stress — not “a software” or “a hotline” alone.  
 - **Objections to address in copy/FAQ:** urgent reachability, fixed contact person, attention for **smaller** WEGs, **how hard is the transition** (Wechsel der Verwaltung).  
-- **Discovery:** searches like “WEG Verwaltung in [Ort]”, recommendations from owners, board, brokers, craftspeople; compares on trust, professionalism, reliability.
+- **Discovery:** searches like “Hausverwaltung in [Ort]” or “WEG Verwaltung in [Ort]”, recommendations from owners, board, brokers, craftspeople; compares on trust, professionalism, reliability.
 
 **Writing rules for this persona:** short paragraphs, scannable headings, concrete checklists, optional FAQ, no jargon walls; show **process** and **responsibility**, not superlatives without proof.
 
@@ -50,14 +53,14 @@ The site must **not** sell “only administration.” It sells outcomes:
 
 ## 4. SEO and “AI search” (AIO) optimization
 
-**Intent:** Rank and be **cited** when people search for WEG-Verwaltung in the **Einzugsgebiet** around the coordinates below.
+**Intent:** Rank and be **cited** when people search for **Verwaltung und Koordination** in the **Einzugsgebiet** around the coordinates below — including queries aimed at **Hausverwaltung**, **WEG**-bezogene Verwaltung, **Mietverwaltung**, **Handwerk/Dienstleister** or **Bau/Sanierung**, without treating only one of these as the “primary” SEO topic on the homepage. **Public-facing copy** should prefer the search-friendly term **Hausverwaltung** (with **(WEG)** where disambiguation is needed), not only the insider term “WEG-Verwaltung”.
 
 **Geographic anchor (for reference):**  
 `49.067591, 8.460911` — **Karlsruhe / nördlicher Landkreis Karlsruhe** (Rhein-Neckar–Oberrhein–Kraichgau–Pfalz-Nord).
 
 ### On-page SEO (basics)
 
-- Unique `<title>` and meta description per major section if the site grows; homepage focused on **WEG-Verwaltung + Region**.  
+- Unique `<title>` and meta description per major section if the site grows; homepage reflects **all four main service areas + Region** (no single area as the exclusive homepage focus).  
 - Semantic HTML (`header`, `nav`, `main`, `section`, `article`, `footer`), one clear `h1`, logical `h2`/`h3`.  
 - **Local signals:** imprint (Impressum) with real address; consistent **NAP** (name, address, phone) if applicable; service area wording that naturally uses **Ortsnamen** from the list (no keyword stuffing).  
 - Structured data: consider `LocalBusiness` / `ProfessionalService` (or appropriate schema) **only** with accurate data the client approves.  
@@ -68,7 +71,7 @@ The site must **not** sell “only administration.” It sells outcomes:
 - Clear, **extractable** answers: who you serve, where, what is included, how to contact, what happens after inquiry.  
 - A short **“In einem Satz”** and **FAQ** block (real questions from the persona).  
 - Avoid vague claims; prefer **bullet lists** of services and **concrete** process steps (e.g. “So läuft der Verwaltungswechsel”).  
-- Entity clarity: company name + “WEG-Verwaltung” + region repeatedly in **natural** sentences, not lists of 50 cities in one paragraph.
+- Entity clarity: company name + **four service fields** (as natural language) + region repeatedly in **natural** sentences, not lists of 50 cities in one paragraph.
 
 ### Target locations (~60 km radius)
 
