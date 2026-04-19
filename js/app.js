@@ -34,6 +34,11 @@
       return path.slice(0, idx) + "/en" + path.slice(idx) + search + hash;
     }
 
+    if (/\/ueber-uns\.html$/i.test(path)) {
+      var aboutBase = path.replace(/\/ueber-uns\.html$/i, "");
+      return aboutBase + "/en/ueber-uns.html" + search + hash;
+    }
+
     return path + search + hash;
   }
 
@@ -87,6 +92,7 @@
       navFaq: "FAQ",
       navContact: "Kontakt",
       navImprint: "Impressum",
+      navAbout: "Über uns",
       navOpenMenu: "Menü öffnen",
       navCloseMenu: "Menü schließen",
       navAriaSubmenuLeistungen: "Leistungen — Untermenü",
@@ -156,6 +162,24 @@
       detailBreadcrumbAria: "Brotkrümel",
       detailBreadcrumbHome: "Startseite",
       detailBack: "Zurück zur Leistungsübersicht",
+      detailBackHome: "Zurück zur Startseite",
+      pageAboutMetaTitle: "Über uns — Segel Immoverwaltung Karlsruhe & Region",
+      pageAboutMetaDescription:
+        "Segel Immoverwaltung: persönlich geführt, strukturierte Hausverwaltung (WEG), Mietverwaltung und Koordination in Karlsruhe und der Region.",
+      pageAboutH1: "Über uns",
+      pageAboutLead:
+        "Persönlich geführt, aus Verantwortung gewachsen — Verlässlichkeit, klare Abläufe und saubere Umsetzung.",
+      pageAboutSectionHeading: "Stefan Kosker",
+      pageAboutP1:
+        "Segel Immoverwaltung ist persönlich geführt und aus echter Verantwortung heraus gewachsen. Mich prägen Verlässlichkeit, klare Abläufe und der Anspruch, Dinge nicht nur zu verwalten, sondern sauber umzusetzen.",
+      pageAboutP2:
+        "Als mein Vater zu Beginn der Corona-Zeit aus gesundheitlichen Gründen ausfiel, habe ich seine Verwaltungsobjekte übernommen und Schritt für Schritt weiterentwickelt. Aus dieser Verantwortung heraus entstand eine Arbeitsweise, die auf Struktur, Nachvollziehbarkeit und festen Zuständigkeiten beruht.",
+      pageAboutP3:
+        "Mein Hintergrund in der IT hilft mir dabei, Verwaltung klar zu organisieren, Prozesse sinnvoll zu digitalisieren und den Überblick zu behalten. Gleichzeitig bringe ich praktische Erfahrung aus dem baulichen Umfeld mit — ein Vorteil, wenn es um Abstimmung, Umsetzung und saubere Koordination geht.",
+      pageAboutP4:
+        "So steht Segel Immoverwaltung heute für eine verlässliche Hausverwaltung mit Schwerpunkt WEG — getragen von dem Verständnis, dass gute Verwaltung immer auch Mietverwaltung, Dienstleisterkoordination und Baukoordination mitdenken muss.",
+      pageAboutImgAlt: "Stefan Kosker",
+      pageAboutImgCaption: "Inhaber: Stefan Kosker",
       pageWegMetaTitle: "Hausverwaltung (WEG) — Segel Immoverwaltung Karlsruhe & Region",
       pageWegMetaDescription:
         "Hausverwaltung für Wohnungseigentümergemeinschaften: Jahresabrechnung, Eigentümerversammlungen, Instandhaltung und Versicherungen — strukturiert, mit festem Ansprechpartner.",
@@ -404,10 +428,14 @@
       pageBauFitNo2:
         "es sich um sehr kleine Maßnahmen ohne Koordinationsbedarf handelt",
       imprintTitle: "Impressum",
-      imprintPlaceholder:
-        "Angaben gemäß gesetzlicher Pflicht (Anbieterkennzeichnung) werden vor Veröffentlichung der Website durch die Segel Immoverwaltung ergänzt. Bis dahin wenden Sie sich bitte direkt per E-Mail.",
-      imprintPlaceholderNote:
-        "Platzhalter bis zur Freigabe der finalen Impressumsdaten.",
+      imprintDdg: "Angaben gemäß § 5 DDG",
+      imprintOwnerName: "Stefan Kosker",
+      imprintStreet: "Eggensteiner Straße 57",
+      imprintCity: "76297 Stutensee",
+      imprintPhone: "Telefon: 07244 558 05 02",
+      imprintEmailLabel: "E-Mail:",
+      imprintVatIntro: "Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:",
+      imprintVatId: "DE343859857",
       footerCompany: "Segel Immoverwaltung",
       langDe: "Deutsch",
       langEn: "English",
@@ -427,6 +455,7 @@
       navFaq: "FAQ",
       navContact: "Contact",
       navImprint: "Legal notice",
+      navAbout: "About",
       navOpenMenu: "Open menu",
       navCloseMenu: "Close menu",
       navAriaSubmenuLeistungen: "Services — submenu",
@@ -496,6 +525,24 @@
       detailBreadcrumbAria: "Breadcrumb",
       detailBreadcrumbHome: "Home",
       detailBack: "Back to services overview",
+      detailBackHome: "Back to home",
+      pageAboutMetaTitle: "About us — Segel Immoverwaltung Karlsruhe & region",
+      pageAboutMetaDescription:
+        "Segel Immoverwaltung: personally led, structured building management (WEG), rental management and coordination in Karlsruhe and the region.",
+      pageAboutH1: "About us",
+      pageAboutLead:
+        "Personally led, grown from responsibility — reliability, clear processes, and sound implementation.",
+      pageAboutSectionHeading: "Stefan Kosker",
+      pageAboutP1:
+        "Segel Immoverwaltung is personally led and has grown from a genuine sense of responsibility. I am guided by reliability, clear processes, and the determination not merely to administer matters, but to implement them thoroughly.",
+      pageAboutP2:
+        "When my father had to step back for health reasons at the start of the COVID period, I took over his managed properties and developed them step by step. From that responsibility emerged a way of working built on structure, traceability, and clearly defined responsibilities.",
+      pageAboutP3:
+        "My IT background helps me organise administration clearly, digitalise processes sensibly, and keep the overview. At the same time I bring practical experience from the building environment — an advantage when alignment, implementation, and clean coordination matter.",
+      pageAboutP4:
+        "Today Segel Immoverwaltung stands for dependable property management with a focus on WEGs — grounded in the conviction that good administration must always also factor in rental management, contractor coordination, and construction coordination.",
+      pageAboutImgAlt: "Stefan Kosker",
+      pageAboutImgCaption: "Owner: Stefan Kosker",
       pageWegMetaTitle: "Building management (WEG) — Segel Immoverwaltung Karlsruhe & region",
       pageWegMetaDescription:
         "Building management for condominium owners’ associations: annual accounts, owners’ meetings, maintenance and insurance — structured, with a dedicated contact person.",
@@ -744,10 +791,14 @@
       pageBauFitNo2:
         "The job is very small with no coordination needs",
       imprintTitle: "Legal notice (Impressum)",
-      imprintPlaceholder:
-        "Mandatory provider details under German law will be added by Segel Immoverwaltung before the site goes live. Until then, please use email for direct contact.",
-      imprintPlaceholderNote:
-        "Placeholder until final imprint details are approved.",
+      imprintDdg: "Information pursuant to § 5 DDG (Digital Services Act)",
+      imprintOwnerName: "Stefan Kosker",
+      imprintStreet: "Eggensteiner Straße 57",
+      imprintCity: "76297 Stutensee",
+      imprintPhone: "Phone: +49 7244 5580502",
+      imprintEmailLabel: "Email:",
+      imprintVatIntro: "VAT identification number pursuant to § 27a UStG:",
+      imprintVatId: "DE343859857",
       footerCompany: "Segel Immoverwaltung",
       langDe: "German",
       langEn: "English",

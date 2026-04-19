@@ -300,7 +300,14 @@ html.logo-in-header .hero-logo-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm) var(--space-md);
+  /* Stretch so every item shares the same row height; centering per-item then aligns labels. */
+  align-items: stretch;
+}
+
+.site-nav > a {
+  display: flex;
   align-items: center;
+  line-height: 1.25;
 }
 
 .site-nav a {
@@ -319,6 +326,15 @@ html.logo-in-header .hero-logo-wrap {
   position: relative;
 }
 
+/* Top-level dropdown in header: match height and vertical centering of adjacent <a> links. */
+.site-nav > .nav-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
 .nav-dropdown__summary {
   list-style: none;
   cursor: pointer;
@@ -328,7 +344,7 @@ html.logo-in-header .hero-logo-wrap {
   gap: 0.4rem;
   font-size: 0.9375rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--color-text);
   padding: 0.15rem 0;
 }
@@ -548,6 +564,70 @@ html.logo-in-header .hero-logo-wrap {
 
 .detail-hero__teaser {
   margin-top: var(--space-md);
+}
+
+.about-intro__note {
+  margin-top: 0;
+  margin-bottom: var(--space-lg);
+  font-size: 0.95rem;
+}
+
+.about-intro {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 48rem) {
+  .about-intro {
+    grid-template-columns: minmax(12rem, 17rem) minmax(0, 1fr);
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+}
+
+.about-intro__figure {
+  margin: 0;
+}
+
+.about-intro__caption {
+  margin: var(--space-sm) 0 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: 1.35;
+}
+
+@media (min-width: 48rem) {
+  .about-intro__caption {
+    text-align: left;
+  }
+}
+
+.about-intro__img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 20rem;
+  margin-inline: auto;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+
+@media (min-width: 48rem) {
+  .about-intro__img {
+    margin-inline: 0;
+    max-width: none;
+  }
+}
+
+.about-intro__prose p {
+  margin: 0 0 var(--space-md);
+}
+
+.about-intro__prose p:last-child {
+  margin-bottom: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1604,9 +1684,16 @@ body:has(.mobile-contact-bar.is-visible) {
   margin: 0;
 }
 
-.impressum-placeholder {
-  font-style: italic;
-  opacity: 0.92;
+.impressum-content {
+  margin: 0;
+}
+
+.impressum-content p {
+  margin: 0.4rem 0;
+}
+
+.impressum-content p:first-child {
+  margin-top: 0;
 }
 
 /* Mobile / tablet: slide-in navigation (burger) */
