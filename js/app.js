@@ -222,8 +222,10 @@
       faq13A:
         "Wir verbinden persönliche Betreuung mit strukturierter Arbeitsweise und einem hohen Anspruch an Verlässlichkeit. Unser Ziel ist nicht nur die laufende Verwaltung, sondern eine langfristig gut organisierte und stabile Betreuung Ihrer Eigentümergemeinschaft.",
       contactTitle: "Kontakt",
-      contactLead:
-        "Kurz beschreiben, was Sie brauchen — wir melden uns mit einem Vorschlag für ein Erstgespräch.",
+      contactPhoneDisplay: "07244 558 05 02",
+      contactEmailDisplay: "kontakt@nomailyet.com",
+      contactCtaClosing: "Haben wir Ihr Interesse geweckt?",
+      contactDrawerAria: "Kontakt — Telefon und E-Mail",
       contactCta: "E-Mail vorbereiten",
       contactMailSubject: "Anfrage Segel Immoverwaltung",
       contactMailBody:
@@ -458,8 +460,10 @@
       faq13A:
         "We combine personal support with structured working practices and high standards of reliability. Our goal is not only day-to-day administration but long-term, well-organised and stable care for your owners' association.",
       contactTitle: "Contact",
-      contactLead:
-        "Briefly describe what you need — we will reply with a suggestion for an initial call.",
+      contactPhoneDisplay: "07244 558 05 02",
+      contactEmailDisplay: "kontakt@nomailyet.com",
+      contactCtaClosing: "Have we sparked your interest?",
+      contactDrawerAria: "Contact — phone and email",
       contactCta: "Prepare email",
       contactMailSubject: "Inquiry: Segel Immoverwaltung",
       contactMailBody:
@@ -532,12 +536,16 @@
       document.title = titleEl.textContent;
     }
 
-    const mailto = document.getElementById("mailto-contact");
-    if (mailto) {
-      const subj = encodeURIComponent(t.contactMailSubject);
-      const body = encodeURIComponent(t.contactMailBody);
-      mailto.href = "mailto:?subject=" + subj + "&body=" + body;
-    }
+    const contactEmail = "kontakt@nomailyet.com";
+    const subj = encodeURIComponent(t.contactMailSubject);
+    const body = encodeURIComponent(t.contactMailBody);
+    const mailHref =
+      "mailto:" + contactEmail + "?subject=" + subj + "&body=" + body;
+    document
+      .querySelectorAll("#mailto-contact, #mailto-contact-detail, .mailto-contact-link")
+      .forEach(function (el) {
+        el.href = mailHref;
+      });
 
     const carousel = document.querySelector(".hero-carousel");
     if (carousel && t.carouselRoleDesc) {

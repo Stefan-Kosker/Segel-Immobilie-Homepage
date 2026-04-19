@@ -164,6 +164,7 @@ a:hover {
 
 .contact-block h2 {
   margin-top: 0;
+  margin-bottom: var(--space-md);
 }
 
 .imprint-footer-h2 {
@@ -1330,6 +1331,64 @@ h3 {
   margin-right: auto;
 }
 
+.contact-block__channels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 var(--space-md);
+}
+
+.contact-block__channel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  text-align: left;
+}
+
+.contact-block__channel > span:not(.contact-block__channel-icon) {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.contact-block__channel-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
+
+.contact-block__channel-icon svg {
+  display: block;
+}
+
+.contact-block__channel:hover > span:not(.contact-block__channel-icon) {
+  text-decoration-thickness: 0.1em;
+}
+
+.contact-block__channel:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.contact-block__hook {
+  margin: 0 0 var(--space-md);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-text);
+}
+
+.nav-drawer__contact {
+  display: none;
+}
+
 .site-footer {
   background: var(--color-footer-bg);
   color: var(--color-footer-text);
@@ -1643,6 +1702,55 @@ body.is-nav-open {
 
   .nav-dropdown__panel a {
     padding-left: var(--space-sm);
+  }
+
+  .nav-drawer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .nav-drawer__contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    word-break: break-word;
+  }
+
+  .nav-drawer__contact-link > span:not(.nav-drawer__contact-icon) {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .nav-drawer__contact-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+  }
+
+  .nav-drawer__contact-icon svg {
+    display: block;
+  }
+
+  .nav-drawer__contact-link:hover > span:not(.nav-drawer__contact-icon) {
+    text-decoration-thickness: 0.1em;
+  }
+
+  .nav-drawer__contact-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
   }
 }
 
