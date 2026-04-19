@@ -759,17 +759,76 @@ h3 {
 .faq summary {
   font-weight: 600;
   cursor: pointer;
-  list-style-position: outside;
+  list-style: none;
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0;
+  transition: margin-bottom 250ms ease;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-top: -0.4rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+  transition: transform 250ms ease;
+  opacity: 0.65;
 }
 
 .faq details[open] summary {
   margin-bottom: var(--space-sm);
 }
 
+.faq details[open] summary::before {
+  transform: rotate(225deg);
+}
+
+/* When JS drives the open/close animation, defer the chevron + margin
+   visual state to the .is-open class so they animate in lockstep with the
+   height transition, even while [open] is still set during the close. */
+.faq.faq-anim details[open] summary {
+  margin-bottom: 0;
+}
+
+.faq.faq-anim details[open] summary::before {
+  transform: rotate(45deg);
+}
+
+.faq.faq-anim details.is-open summary {
+  margin-bottom: var(--space-sm);
+}
+
+.faq.faq-anim details.is-open summary::before {
+  transform: rotate(225deg);
+}
+
+.faq-body {
+  /* No fixed overflow here; the script sets overflow:hidden inline only
+     while a height animation is running, then clears it. */
+}
+
 .faq p {
   margin: 0;
   color: var(--color-text-muted);
   font-size: 0.98rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq summary,
+  .faq summary::before {
+    transition: none;
+  }
 }
 
 .contact-block {
