@@ -110,17 +110,19 @@
       navLeistungDl: "Dienstleisterkoordination",
       navLeistungBau: "Baukoordination",
       brandTag: "Immobilienverwaltung & Koordination",
+      heroBadge:
+        "Persönliche Immobilienverwaltung in Karlsruhe und der Region",
       brandLogoAlt: "Segel Immoverwaltung — Logo",
-      heroH1: "Verwaltung und Koordination, die entlasten und Struktur schaffen",
+      heroH1: "Damit Ihre WEG wieder ruhiger, verlässlicher und gut organisiert läuft",
       heroLead:
-        "Segel Immoverwaltung betreut in Karlsruhe und der Region vier gleichwertige Schwerpunkte: Hausverwaltung (WEG), Mietverwaltung, Dienstleister- und Baukoordination — mit klaren Abläufen und festem Ansprechpartner.",
+        "Wir übernehmen Verwaltung, Abstimmung und Umsetzung für WEGs und Immobilien in Karlsruhe und der Region – persönlich, strukturiert und mit einem festen Ansprechpartner. So werden Aufgaben klarer, Wege kürzer und der Alltag für Eigentümer und Beirat spürbar leichter.",
       carouselRoleDesc: "Karussell",
-      carouselLeistungenHeading: "Unsere Leistungen",
+      carouselLeistungenHeading: "Unsere Leistungen im Überblick",
       carouselControlsAria: "Karussell steuern",
       carouselPrevAria: "Vorherige Leistung",
       carouselNextAria: "Nächste Leistung",
-      ctaPrimary: "Kostenloses Erstgespräch für Ihre WEG anfragen",
-      ctaSecondary: "Verwaltungswechsel in 3 Schritten",
+      ctaPrimary: "Kostenloses Erstgespräch für Ihre WEG vereinbaren",
+      ctaSecondary: "So läuft ein Verwaltungswechsel ab",
       homeEntityTitle: "Wer wir sind — und wo wir arbeiten",
       homeEntityLead:
         "Segel Immoverwaltung ist eine persönlich geführte Immobilienverwaltung mit Sitz in Stutensee (Landkreis Karlsruhe). Inhaber: Stefan Kosker. Die vier Leistungsfelder Hausverwaltung (WEG), Mietverwaltung sowie Dienstleister- und Baukoordination sind bei uns gleichgewichtig aufgestellt. Wir betreuen Objekte im Raum Karlsruhe, nördlicher Landkreis Karlsruhe und Umgebung — unter anderem Rhein-Neckar, Mannheim, Heidelberg, Kraichgau und Oberrhein, typischerweise in etwa 60 km Umkreis.",
@@ -142,7 +144,7 @@
       pageWegAnswerWhat:
         "Unter anderem Jahresabrechnungen und Wirtschaftspläne, Vorbereitung und Nachbereitung der Eigentümerversammlungen inklusive Protokoll und Beschlussumsetzung, Instandhaltung und Handwerkerkoordination, Versicherungen und Schadensfälle, Hausgeld und Unterlagen sowie die Schnittstellen zu Steuerberatung und Recht — mit festem Ansprechpartner.",
       pageWegAnswerStart:
-        "Erstgespräch zur Klärung von Objekt, Bedarf und Ansprechpartnern, dann strukturierte Übernahme der Unterlagen und laufenden Vorgänge, anschließend Start mit festen Zuständigkeiten (auf der Startseite auch unter „Verwaltungswechsel in 3 Schritten“ beschrieben).",
+        "Erstgespräch zur Klärung von Objekt, Bedarf und Ansprechpartnern, dann strukturierte Übernahme der Unterlagen und laufenden Vorgänge, anschließend Start mit festen Zuständigkeiten (auf der Startseite auch unter „So läuft ein Verwaltungswechsel ab“ beschrieben).",
       pageWegAnswerReply:
         "Auf Ihre Anfrage reagieren wir üblicherweise innerhalb eines Werktags telefonisch oder per E-Mail.",
       pageMietAnswerWho:
@@ -169,22 +171,22 @@
         "Erstgespräch zu Umfang, Zeitfenster und Schnittstellen (z. B. Beirat, Sondervermögen), danach strukturierter Projektstart mit klaren Zuständigkeiten und Kommunikationswegen.",
       pageBauAnswerReply:
         "In der Regel innerhalb eines Werktags, telefonisch oder per E-Mail.",
-      pillarsTitle: "Was uns ausmacht",
-      pillar1Title: "Entlastung",
+      pillarsTitle: "Worauf Sie sich bei uns verlassen können",
+      pillar1Title: "Spürbare Entlastung im Alltag",
       pillar1Text:
-        "Wir übernehmen operative Aufgaben strukturiert und zuverlässig – damit Beirat und Eigentümergemeinschaft spürbar entlastet werden.",
-      pillar2Title: "Ordnung & Transparenz",
+        "Wir kümmern uns um die laufenden Themen, behalten Fristen und Vorgänge im Blick und nehmen dem Beirat wie auch der Eigentümergemeinschaft spürbar Arbeit ab.",
+      pillar2Title: "Klarheit, auf die Sie sich verlassen können",
       pillar2Text:
-        "Klare Abläufe, Fristen und eine nachvollziehbare Dokumentation schaffen Struktur und reduzieren unnötige Rückfragen.",
-      pillar3Title: "Verlässlichkeit",
+        "Sie wissen, was ansteht, was bereits erledigt wurde und wie es weitergeht. Klare Abläufe und nachvollziehbare Dokumentation sorgen für mehr Übersicht und weniger unnötige Rückfragen.",
+      pillar3Title: "Verlässlich begleitet – vom Beschluss bis zur Umsetzung",
       pillar3Text:
-        "Fristen bleiben im Blick, Beschlüsse werden sauber nachverfolgt und vereinbarte Maßnahmen zuverlässig umgesetzt.",
-      pillar4Title: "Ruhigere Zusammenarbeit",
+        "Wir bleiben an Themen dran, verfolgen Beschlüsse sauber nach und sorgen dafür, dass vereinbarte Maßnahmen nicht im Alltag untergehen.",
+      pillar4Title: "Mehr Ruhe in der Zusammenarbeit",
       pillar4Text:
-        "Klare Kommunikation und eine sachliche, diplomatische Begleitung sorgen für mehr Transparenz und weniger Reibung — in der Gemeinschaft, im Mietalltag und bei Koordination am Objekt.",
-      servicesTitle: "Was wir in der Hausverwaltung für Ihre WEG übernehmen",
+        "Mit klarer Kommunikation, festen Zuständigkeiten und einer ruhigen Begleitung schaffen wir mehr Transparenz und weniger Reibung – in der Gemeinschaft, im Mietalltag und bei Maßnahmen am Objekt.",
+      servicesTitle: "Was wir für Ihre WEG zuverlässig übernehmen",
       servicesLead:
-        "Klar, strukturiert und verständlich — ohne unnötiges Fachchinesisch.",
+        "Klar erklärt, gut organisiert und so aufbereitet, dass Eigentümer und Beirat jederzeit den Überblick behalten.",
       svcAccountingTitle: "Abrechnung & Finanzplanung",
       svcAccountingItems:
         "Jahresabrechnungen, Wirtschaftspläne, Hausgeld und alle wichtigen kaufmännischen Grundlagen — transparent und gut nachvollziehbar, bei Bedarf in Abstimmung mit dem Steuerberater.",
@@ -208,13 +210,13 @@
         "Hausverwaltung für Wohnungseigentümergemeinschaften (WEG): Abrechnung, Versammlungen, Instandhaltung, Versicherungen und verlässliche Kommunikation.",
       leistungTeaserMietTitle: "Mietverwaltung",
       leistungTeaserMietText:
-        "Organisation rund um vermietete Einheiten: laufende Verwaltung, Abstimmung mit Mietern und saubere Einbindung kaufmännischer Abläufe.",
+        "So bleibt Ihr Objekt im Alltag gut betreut, ohne dass Sie sich um jede Einzelabstimmung selbst kümmern müssen.",
       leistungTeaserDlTitle: "Dienstleisterkoordination",
       leistungTeaserDlText:
-        "Handwerk, Hausmeister, Versorger: Angebote, Termine und Nachverfolgung — damit Maßnahmen nicht stehen bleiben.",
+        "So bleiben Aufgaben nicht liegen und Zuständigkeiten werden für alle Beteiligten klarer.",
       leistungTeaserBauTitle: "Baukoordination",
       leistungTeaserBauText:
-        "Begleitung größerer Instandsetzungs- und Sanierungsprojekte: Planung, Koordination der Gewerke und nachvollziehbare Dokumentation.",
+        "Von der Vorbereitung bis zur Übergabe sorgen wir dafür, dass Maßnahmen geordnet laufen und alle Beteiligten wissen, was als Nächstes ansteht.",
       leistungTeaserCta: "Mehr erfahren",
       detailBreadcrumbAria: "Brotkrümel",
       detailBreadcrumbHome: "Startseite",
@@ -225,14 +227,14 @@
         "Segel Immoverwaltung: persönlich geführt, strukturierte Hausverwaltung (WEG), Mietverwaltung und Koordination in Karlsruhe und der Region.",
       pageAboutH1: "Über uns",
       pageAboutLead:
-        "Persönlich geführt, aus Verantwortung gewachsen — Verlässlichkeit, klare Abläufe und saubere Umsetzung.",
+        "Persönlich geführt, verlässlich im Alltag und mit dem Anspruch, Verantwortung wirklich zu übernehmen.",
       pageAboutSectionHeading: "Stefan Kosker",
       pageAboutP1:
-        "Segel Immoverwaltung ist persönlich geführt und aus echter Verantwortung heraus gewachsen. Mich prägen Verlässlichkeit, klare Abläufe und der Anspruch, Dinge nicht nur zu verwalten, sondern sauber umzusetzen.",
+        "Segel Immoverwaltung ist persönlich geführt und aus einer sehr konkreten Verantwortung heraus entstanden. Mir ist wichtig, dass Verwaltung nicht nur formal funktioniert, sondern im Alltag wirklich trägt: verlässlich, klar organisiert und mit sauberer Umsetzung.",
       pageAboutP2:
-        "Als mein Vater zu Beginn der Corona-Zeit aus gesundheitlichen Gründen ausfiel, habe ich seine Verwaltungsobjekte übernommen und Schritt für Schritt weiterentwickelt. Aus dieser Verantwortung heraus entstand eine Arbeitsweise, die auf Struktur, Nachvollziehbarkeit und festen Zuständigkeiten beruht.",
+        "Als mein Vater zu Beginn der Corona-Zeit aus gesundheitlichen Gründen ausfiel, habe ich seine Verwaltungsobjekte übernommen und Schritt für Schritt weitergeführt. Aus dieser Situation ist eine Arbeitsweise entstanden, die auf Verlässlichkeit, klaren Zuständigkeiten und nachvollziehbaren Abläufen beruht.",
       pageAboutP3:
-        "Mein Hintergrund in der IT hilft mir dabei, Verwaltung klar zu organisieren, Prozesse sinnvoll zu digitalisieren und den Überblick zu behalten. Gleichzeitig bringe ich praktische Erfahrung aus dem baulichen Umfeld mit — ein Vorteil, wenn es um Abstimmung, Umsetzung und saubere Koordination geht.",
+        "Mein Hintergrund in der IT hilft mir dabei, Abläufe sinnvoll zu strukturieren, Dinge übersichtlich zu halten und Prozesse dort zu digitalisieren, wo es den Alltag wirklich einfacher macht. Gleichzeitig bringe ich praktische Erfahrung aus dem baulichen Umfeld mit – ein echter Vorteil, wenn es um Abstimmung, Umsetzung und saubere Koordination geht.",
       pageAboutP4:
         "So steht Segel Immoverwaltung heute für eine verlässliche Hausverwaltung mit Schwerpunkt WEG — getragen von dem Verständnis, dass gute Verwaltung immer auch Mietverwaltung, Dienstleisterkoordination und Baukoordination mitdenken muss.",
       pageAboutImgAlt: "Stefan Kosker",
@@ -242,14 +244,14 @@
         "Hausverwaltung für Wohnungseigentümergemeinschaften: Jahresabrechnung, Eigentümerversammlungen, Instandhaltung und Versicherungen — strukturiert, mit festem Ansprechpartner.",
       pageWegH1: "Hausverwaltung (WEG)",
       pageWegLead:
-        "Was wir für Ihre Wohnungseigentümergemeinschaft konkret übernehmen — klar strukturiert und gut nachvollziehbar.",
+        "Damit Ihre WEG im Alltag verlässlich betreut wird und offene Themen nicht liegen bleiben.",
       pageWegImgAlt: "Eigentümerversammlung (Symbolbild)",
       pageMietMetaTitle: "Mietverwaltung — Segel Immoverwaltung Karlsruhe & Region",
       pageMietMetaDescription:
         "Mietverwaltung für Eigentümer: laufende Organisation, Mieterkommunikation und kaufmännische Abläufe — mit festem Ansprechpartner.",
       pageMietH1: "Mietverwaltung",
       pageMietLead:
-        "Organisierte Verwaltung vermieteter Objekte: weniger operative Last im Alltag, klare Abläufe gegenüber Mietern und verlässliche Abstimmung der kaufmännischen Themen — ohne Rechtsberatung zu ersetzen, wo Spezialisten gefragt sind.",
+        "Wir entlasten Sie im Mietalltag, kümmern uns um die laufende Organisation und sorgen dafür, dass Kommunikation, Abrechnung und Abstimmung verlässlich zusammenlaufen.",
       pageMietImgAlt: "Mietverwaltung (Symbolbild)",
       pageMietServicesHeading: "Was wir in der Mietverwaltung übernehmen",
       pageMietBlock1Title: "Kaufmännische Verwaltung",
@@ -269,11 +271,11 @@
         "Koordination von Handwerk, Hausmeister und Versorgern: Angebote, Termine und Qualität im Blick — strukturiert dokumentiert.",
       pageDlH1: "Dienstleisterkoordination",
       pageDlLead:
-        "Wenn viele Parteien zusammenkommen, braucht es eine ruhige Steuerung: wir bündeln Anfragen, holen Vergleichsangebote ein, koordinieren Termine und begleiten die Ausführung — damit nichts untergeht.",
+        "Wenn viele Beteiligte zusammenkommen, braucht es vor allem eines: einen klaren Überblick. Wir koordinieren Anfragen, Angebote, Termine und Rückmeldungen so, dass Maßnahmen verlässlich vorankommen.",
       pageDlImgAlt: "Koordination am Bau (Symbolbild)",
       pageDlServicesHeading: "Was wir in der Dienstleisterkoordination übernehmen",
       pageDlServicesLead:
-        "Damit Leistungen abgestimmt, transparent und zuverlässig umgesetzt werden.",
+        "Damit aus vielen Einzelthemen wieder ein geordneter Ablauf wird.",
       pageDlBlock1Title: "Erfassung & Einordnung",
       pageDlBlock1Text:
         "Störungen, Maßnahmen und Rückmeldungen werden strukturiert aufgenommen, eingeordnet und für die weitere Bearbeitung klar erfasst.",
@@ -294,11 +296,11 @@
         "Koordination von Instandsetzungs- und Sanierungsmaßnahmen: Gewerke, Termine und Dokumentation — strukturiert begleitet.",
       pageBauH1: "Baukoordination",
       pageBauLead:
-        "Größere Maßnahmen an Gebäude oder technischer Anlage brauchen Planung und Begleitung: wir steuern Abläufe, halten Fristen im Blick und sorgen für eine nachvollziehbare Dokumentation für Eigentümer und Beirat.",
+        "Größere Maßnahmen brauchen klare Planung, verlässliche Begleitung und einen ruhigen Überblick. Wir koordinieren Abläufe so, dass Fristen, Kosten und offene Punkte für Eigentümer und Beirat nachvollziehbar bleiben.",
       pageBauImgAlt: "Baustelle / Sanierung (Symbolbild)",
       pageBauServicesHeading: "Was wir bei Maßnahmen und Projekten übernehmen",
       pageBauServicesLead:
-        "Damit Planung, Umsetzung und Übergabe strukturiert und verlässlich ablaufen.",
+        "Damit auch größere Projekte übersichtlich bleiben und sauber begleitet werden.",
       pageBauBlock1Title: "Grundlagen & Bedarf",
       pageBauBlock1Text:
         "Wir erfassen den Bedarf auf Basis von Beschlüssen, Bestandsaufnahmen oder konkreten Anforderungen und schaffen damit eine belastbare Grundlage für die weitere Planung.",
@@ -317,27 +319,27 @@
       pageBauBlock6Title: "Übergabe & Dokumentation",
       pageBauBlock6Text:
         "Nach Abschluss werden relevante Unterlagen geordnet in die laufende Verwaltung übernommen – als Grundlage für Abrechnung, Fortführung und spätere Maßnahmen.",
-      regionTitle: "Einzugsgebiet",
+      regionTitle: "In welchen Orten wir für Sie tätig sind",
       regionLead:
-        "Schwerpunkt Karlsruhe und Umgebung (ca. 60 km). Regelmäßig betreuen wir Objekte u. a. in:",
+        "Unser Schwerpunkt liegt in Karlsruhe und der Region. Regelmäßig betreuen wir Objekte unter anderem in folgenden Orten:",
       regionMore: "Weitere Orte im Radius gerne auf Anfrage.",
       regionCities:
         "Achern · Baden-Baden · Bretten · Bruchsal · Bühl · Ettlingen · Germersheim · Heidelberg · Karlsruhe · Landau in der Pfalz · Mannheim · Pforzheim · Rastatt · Schwetzingen · Speyer · Stutensee · Waghäusel",
       processTitle: "So läuft der Verwaltungswechsel",
       processLead:
-        "Wir begleiten den Wechsel strukturiert und sorgen für einen geordneten, reibungslosen Übergang.",
+        "Ein Verwaltungswechsel muss nicht kompliziert sein. Wir begleiten den Übergang Schritt für Schritt, damit Unterlagen, Zuständigkeiten und laufende Themen sauber übernommen werden.",
       step1Title: "Erstgespräch & Bedarf",
       step1Text:
-        "Zu Beginn klären wir die wichtigsten Eckpunkte – etwa Objekt oder Gemeinschaft, Umfang, aktuelle Themen, Ansprechpartner und Erreichbarkeit.",
+        "Im ersten Gespräch schauen wir gemeinsam auf Ihre aktuelle Situation: Was läuft bereits gut, wo gibt es offene Punkte und was braucht Ihre Gemeinschaft jetzt konkret?",
       step2Title: "Unterlagen & Übernahme",
       step2Text:
-        "Wir übernehmen die vorhandenen Unterlagen und laufenden Vorgänge strukturiert und nachvollziehbar – mit klarem Blick auf Vollständigkeit und offene Themen.",
+        "Wir sichten die vorhandenen Unterlagen, ordnen laufende Themen sauber ein und sorgen dafür, dass beim Übergang nichts Wichtiges verloren geht.",
       step3Title: "Start & Kommunikation",
       step3Text:
-        "Zum Start legen wir Zuständigkeiten und Kommunikationswege fest und kümmern uns um die geordnete Weiterführung laufender Verwaltungs- und Koordinationsthemen — etwa Hausgeld, Versicherungen, Termine und offene Maßnahmen.",
-      processQuickTitle: "Kurz & konkret zum Verwaltungswechsel",
+        "Zum Start schaffen wir klare Zuständigkeiten und verlässliche Kommunikationswege, damit Ihre Verwaltung vom ersten Tag an geordnet weiterläuft.",
+      processQuickTitle: "So läuft der Wechsel bei uns ab",
       processStepsBlurb:
-        "So läuft ein Wechsel in 3 Schritten: Erstgespräch und Bedarf klären → Unterlagen und laufende Vorgänge strukturiert übernehmen → Start mit festen Zuständigkeiten und klaren Kommunikationswegen.",
+        "Zuerst klären wir gemeinsam die Ausgangslage. Danach übernehmen wir Unterlagen und offene Vorgänge geordnet. Anschließend starten wir mit klaren Zuständigkeiten und einem verlässlichen Kommunikationsweg.",
       processDocsHeading: "Welche Unterlagen wir zuerst brauchen",
       processDocsLi1:
         "Letzte Jahresabrechnung, Wirtschaftsplan und aktuelle Hausgeldabrechnungen (sofern vorhanden)",
@@ -399,88 +401,88 @@
       contactEmailDisplay: CONTACT_EMAIL,
       contactCtaClosing: "Haben wir Ihr Interesse geweckt?",
       contactMicrocopy:
-        "Nehmen Sie unverbindlich Kontakt mit uns auf – telefonisch oder per E-Mail. Wir melden uns in der Regel innerhalb eines Werktags zurück und besprechen mit Ihnen, wie Ihr Anliegen am besten eingeordnet und weitergeführt werden kann. Für eine schnelle und gezielte Rückmeldung helfen uns einige kurze Angaben: um welches Objekt oder welche Gemeinschaft es geht, in welchem Ort sich die Immobilie befindet, welches Thema Sie beschäftigt und wann Sie gut erreichbar sind. So erhalten Sie ohne Umwege eine passende erste Einschätzung und einen klaren nächsten Schritt.",
+        "Sie möchten Ihre Verwaltung neu aufstellen, einen Wechsel vorbereiten oder einfach erst einmal klären, ob wir gut zusammenpassen? Melden Sie sich gern telefonisch oder per E-Mail. Wir hören uns Ihr Anliegen in Ruhe an, geben eine erste Einschätzung und sagen Ihnen offen, was der nächste sinnvolle Schritt ist. In der Regel melden wir uns innerhalb eines Werktags zurück. Hilfreich sind ein paar kurze Angaben zum Objekt, zum Ort und zum aktuellen Thema – dann können wir uns gezielt vorbereiten.",
       contactDrawerAria: "Kontakt — Telefon und E-Mail",
-      contactCtaHome: "Unverbindliche Anfrage senden",
+      contactCtaHome: "Unverbindlich Erstgespräch anfragen",
       contactMailSubjectHome: "Anfrage: Erstgespräch — Segel Immoverwaltung",
       contactMailBodyHome:
         "Guten Tag,\n\nwir möchten ein unverbindliches Erstgespräch zur Hausverwaltung (WEG) anfragen.\n\nGemeinschaft / Objekt:\nOrt:\nKurz zum Anliegen (z. B. Verwaltungswechsel, Beratung):\nErreichbarkeit:\n\nMit freundlichen Grüßen",
       mobileContactBarLabel: "Schnellkontakt",
       mobileContactCall: "Anrufen",
       mobileContactMail: "E-Mail",
-      mobileContactRequest: "Anfrage",
+      mobileContactRequest: "Erstgespräch",
       pageWegContactHook:
-        "Beirat entlasten und Verwaltungswechsel sauber übernehmen — wir klären Bedarf und nächste Schritte im Erstgespräch.",
-      pageWegContactCta: "Kostenloses Erstgespräch für Ihre WEG anfragen",
+        "Ob laufende Betreuung oder geordneter Verwaltungswechsel: Wir schauen gemeinsam, was Ihre WEG jetzt braucht und wie ein sinnvoller Start aussehen kann.",
+      pageWegContactCta: "Kostenloses Erstgespräch für Ihre WEG vereinbaren",
       pageWegMailSubject: "Anfrage: Hausverwaltung (WEG) — Segel Immoverwaltung",
       pageWegMailBody:
         "Guten Tag,\n\nwir interessieren uns für die Hausverwaltung unserer WEG.\n\nObjekt / Gemeinschaft:\nOrt:\nAktuelles Thema (z. B. Verwaltungswechsel, Übernahme):\nErreichbarkeit:\n\nMit freundlichen Grüßen",
       pageMietContactHook:
-        "Weniger operative Last im Mietalltag — wir strukturieren Verwaltung, Mieterkommunikation und kaufmännische Abläufe.",
-      pageMietContactCta: "Unverbindliche Anfrage zur Mietverwaltung senden",
+        "Wenn Sie Ihre vermietete Immobilie verlässlich betreuen lassen möchten, besprechen wir gern, welche Unterstützung für Ihr Objekt sinnvoll ist.",
+      pageMietContactCta: "Mietverwaltung unverbindlich anfragen",
       pageMietMailSubject: "Anfrage: Mietverwaltung — Segel Immoverwaltung",
       pageMietMailBody:
         "Guten Tag,\n\nwir möchten die Mietverwaltung für unsere vermietete(n) Einheit(en) anfragen.\n\nObjekt / Adresse:\nAnzahl Einheiten / kurze Einordnung:\nAktuelles Thema:\nErreichbarkeit:\n\nMit freundlichen Grüßen",
       pageDlContactHook:
-        "Handwerk, Hausmeister, Versorger — wir koordinieren Angebote, Termine und Nachverfolgung am Objekt.",
-      pageDlContactCta: "Anfrage zur Dienstleisterkoordination senden",
+        "Gern klären wir mit Ihnen, welche Themen aktuell gebündelt und sauber koordiniert werden sollten.",
+      pageDlContactCta: "Dienstleisterkoordination unverbindlich anfragen",
       pageDlMailSubject: "Anfrage: Dienstleisterkoordination — Segel Immoverwaltung",
       pageDlMailBody:
         "Guten Tag,\n\nwir benötigen Unterstützung bei der Koordination von Dienstleistern am Objekt.\n\nObjekt / Adresse:\nArt des Bedarfs (z. B. Instandhaltung, Störung, mehrere Gewerke):\nErreichbarkeit:\n\nMit freundlichen Grüßen",
       pageBauContactHook:
-        "Größere Maßnahmen begleiten wir mit Planung, Gewerkekoordination und nachvollziehbarer Dokumentation.",
-      pageBauContactCta: "Anfrage zur Baukoordination senden",
+        "Wenn eine größere Maßnahme ansteht, besprechen wir gern mit Ihnen, wie die nächsten Schritte sinnvoll und geordnet aufgesetzt werden können.",
+      pageBauContactCta: "Bauprojekt unverbindlich besprechen",
       pageBauMailSubject: "Anfrage: Baukoordination — Segel Immoverwaltung",
       pageBauMailBody:
         "Guten Tag,\n\nwir planen oder führen eine größere Instandsetzungs- oder Sanierungsmaßnahme durch und suchen Koordination.\n\nObjekt / Adresse:\nArt / ungefährer Umfang der Maßnahme:\nZeitrahmen (falls bekannt):\nErreichbarkeit:\n\nMit freundlichen Grüßen",
-      pageWegFitHeading: "Passt das zu Ihrer Situation?",
-      pageWegFitYesTitle: "Geeignet für",
+      pageWegFitHeading: "Für wen diese Leistung gut passt",
+      pageWegFitYesTitle: "Besonders passend, wenn …",
       pageWegFitYes1:
         "Wohnungseigentümergemeinschaften mit laufender oder geplanter professioneller Verwaltung",
       pageWegFitYes2:
         "Beiräte und Eigentümer, die operative Themen strukturiert abgeben möchten",
       pageWegFitYes3:
         "Gemeinschaften mit Verwaltungswechsel oder Bedarf an sauberer Übernahme",
-      pageWegFitNoTitle: "Weniger geeignet, wenn",
+      pageWegFitNoTitle: "Weniger passend, wenn …",
       pageWegFitNo1:
         "Sie ausschließlich einmalige Rechtsberatung oder Prozessvertretung suchen (hier sind Fachanwälte die richtige Adresse)",
       pageWegFitNo2:
         "es um Themen ohne Bezug zu verwalteten Objekten oder Gemeinschaften geht",
-      pageMietFitHeading: "Passt das zu Ihrer Situation?",
-      pageMietFitYesTitle: "Geeignet für",
+      pageMietFitHeading: "Für wen diese Leistung gut passt",
+      pageMietFitYesTitle: "Besonders passend, wenn …",
       pageMietFitYes1:
         "Eigentümer vermieteter Wohn- oder Gewerbeeinheiten mit Verwaltungsbedarf im Alltag",
       pageMietFitYes2:
         "Objekte, bei denen Mieterkommunikation, Abrechnungen und Koordination entlastet werden sollen",
       pageMietFitYes3:
         "Eigentümer, die einen festen Ansprechpartner für organisatorische und kaufmännische Abläufe möchten",
-      pageMietFitNoTitle: "Weniger geeignet, wenn",
+      pageMietFitNoTitle: "Weniger passend, wenn …",
       pageMietFitNo1:
         "Sie ausschließlich rechtliche Auseinandersetzungen mit Mietern führen lassen möchten, ohne Verwaltungsbezug",
       pageMietFitNo2:
         "Sie keine verwaltete Immobilie im beschriebenen Sinne betreuen",
-      pageDlFitHeading: "Passt das zu Ihrer Situation?",
-      pageDlFitYesTitle: "Geeignet für",
+      pageDlFitHeading: "Für wen diese Leistung gut passt",
+      pageDlFitYesTitle: "Besonders passend, wenn …",
       pageDlFitYes1:
         "Objekte mit mehreren Dienstleistern oder laufenden Koordinationsthemen (Handwerk, Hausmeister, Versorger)",
       pageDlFitYes2:
         "WEGs, Vermieter oder Verwalter, die Angebote, Termine und Nachverfolgung bündeln möchten",
       pageDlFitYes3:
         "Situationen, in denen Maßnahmen sonst liegen bleiben oder unklare Zuständigkeiten entstehen",
-      pageDlFitNoTitle: "Weniger geeignet, wenn",
+      pageDlFitNoTitle: "Weniger passend, wenn …",
       pageDlFitNo1:
         "Sie ausschließlich eine einzelne Kleinreparatur ohne laufende Koordination benötigen",
       pageDlFitNo2:
         "kein konkreter Bedarf an strukturierter Steuerung mehrerer Leistungserbringer besteht",
-      pageBauFitHeading: "Passt das zu Ihrer Situation?",
-      pageBauFitYesTitle: "Geeignet für",
+      pageBauFitHeading: "Für wen diese Leistung gut passt",
+      pageBauFitYesTitle: "Besonders passend, wenn …",
       pageBauFitYes1:
         "Größere Instandsetzungs-, Sanierungs- oder Modernisierungsprojekte mit mehreren Gewerken",
       pageBauFitYes2:
         "WEGs oder Eigentümer, die Planung, Vergleich und Ausführung begleitet haben möchten",
       pageBauFitYes3:
         "Vorhaben, bei denen Fristen, Kosten und Dokumentation von vornherein klar bleiben sollen",
-      pageBauFitNoTitle: "Weniger geeignet, wenn",
+      pageBauFitNoTitle: "Weniger passend, wenn …",
       pageBauFitNo1:
         "Sie ausschließlich Architektur- oder Bauleitung durch einen externen Fachplaner ohne Verwaltungsbezug suchen",
       pageBauFitNo2:
@@ -526,17 +528,18 @@
       navLeistungDl: "Contractor coordination",
       navLeistungBau: "Construction coordination",
       brandTag: "Property management & coordination",
+      heroBadge: "Personal property management in Karlsruhe and the region",
       brandLogoAlt: "Segel Immoverwaltung — logo",
-      heroH1: "Management and coordination that create relief and structure",
+      heroH1: "So your WEG runs more calmly, reliably and in good order again",
       heroLead:
-        "Segel Immoverwaltung serves Karlsruhe and the region across four equally weighted areas: building management (WEG), rental management, contractor and construction coordination — clear processes and a dedicated point of contact.",
+        "We take care of administration, coordination and implementation for WEGs and properties in Karlsruhe and the region — personally, in a structured way and with a dedicated point of contact. Tasks become clearer, paths shorter and day-to-day life noticeably easier for owners and the advisory board.",
       carouselRoleDesc: "carousel",
-      carouselLeistungenHeading: "Our services",
+      carouselLeistungenHeading: "Our services at a glance",
       carouselControlsAria: "Carousel controls",
       carouselPrevAria: "Previous service",
       carouselNextAria: "Next service",
-      ctaPrimary: "Request a free initial call for your WEG",
-      ctaSecondary: "Changing managers in 3 steps",
+      ctaPrimary: "Arrange a free initial call for your WEG",
+      ctaSecondary: "How a change of management works",
       homeEntityTitle: "Who we are — and where we work",
       homeEntityLead:
         "Segel Immoverwaltung is an owner-led property management company based in Stutensee (Karlsruhe district). Owner: Stefan Kosker. We treat building management (WEG), rental management, contractor coordination and construction coordination as four equal pillars. We look after properties around Karlsruhe, the northern Karlsruhe district and the surrounding area — including Rhine-Neckar, Mannheim, Heidelberg, Kraichgau and the Upper Rhine — typically within about 60 km.",
@@ -558,7 +561,7 @@
       pageWegAnswerWhat:
         "Including annual statements and economic plans, preparing and following up owners’ meetings with minutes and implementation of resolutions, maintenance and trades coordination, insurance and claims, service charges and records, and interfaces to tax/legal advisers — with a dedicated point of contact.",
       pageWegAnswerStart:
-        "Initial call to clarify the property, scope and contacts, then structured handover of documents and open items, then go-live with clear responsibilities (see also Changing managers in 3 steps on the home page).",
+        "Initial call to clarify the property, scope and contacts, then structured handover of documents and open items, then go-live with clear responsibilities (see also How a change of management works on the home page).",
       pageWegAnswerReply:
         "We usually respond to enquiries within one business day by phone or email.",
       pageMietAnswerWho:
@@ -585,22 +588,22 @@
         "Initial call on scope, time window and interfaces (e.g. board, special fund), then structured project start with clear responsibilities and communication paths.",
       pageBauAnswerReply:
         "Usually within one business day, by phone or email.",
-      pillarsTitle: "What defines us",
-      pillar1Title: "Relief",
+      pillarsTitle: "What you can count on with us",
+      pillar1Title: "Noticeable relief in day-to-day life",
       pillar1Text:
-        "We take on operational tasks in a structured, dependable way — so the advisory board and owners’ association feel a real reduction in workload.",
-      pillar2Title: "Order & transparency",
+        "We look after ongoing matters, keep deadlines and cases in view, and take real work off the advisory board and the owners’ association.",
+      pillar2Title: "Clarity you can rely on",
       pillar2Text:
-        "Clear processes, deadlines and traceable documentation create structure and cut down on unnecessary back-and-forth.",
-      pillar3Title: "Dependability",
+        "You know what is due, what has already been done and what happens next. Clear processes and traceable documentation mean fewer unnecessary questions.",
+      pillar3Title: "Reliable support — from resolution to implementation",
       pillar3Text:
-        "Deadlines stay on the radar, resolutions are followed through properly and agreed measures are implemented reliably.",
-      pillar4Title: "Calmer collaboration",
+        "We stay on top of topics, follow up resolutions properly and make sure agreed measures do not get lost in the day-to-day.",
+      pillar4Title: "More calm in working together",
       pillar4Text:
-        "Clear communication and factual, diplomatic support foster more transparency and less friction — in owners’ associations, rental operations and on-site coordination.",
-      servicesTitle: "What we take on in building management for your WEG",
+        "With clear communication, defined responsibilities and calm support we create more transparency and less friction — in the community, in rental operations and for work on site.",
+      servicesTitle: "What we reliably take on for your WEG",
       servicesLead:
-        "Clear, structured and easy to understand — without unnecessary jargon.",
+        "Explained clearly, well organised and prepared so owners and the advisory board always keep the overview.",
       svcAccountingTitle: "Accounts & financial planning",
       svcAccountingItems:
         "Annual statements, economic plans, service charges and all essential commercial foundations — transparent and easy to follow, coordinated with your tax adviser where needed.",
@@ -624,13 +627,13 @@
         "Building management for condominium owners’ associations: accounts, meetings, maintenance, insurance and dependable communication.",
       leistungTeaserMietTitle: "Rental property management",
       leistungTeaserMietText:
-        "Organisation for rented units: day-to-day administration, tenant communication and sound commercial processes.",
+        "So your property stays well looked after day to day without you handling every coordination yourself.",
       leistungTeaserDlTitle: "Contractor coordination",
       leistungTeaserDlText:
-        "Trades, caretaker, utilities: quotes, appointments and follow-up — so work does not stall.",
+        "So tasks do not pile up and responsibilities become clearer for everyone involved.",
       leistungTeaserBauTitle: "Construction coordination",
       leistungTeaserBauText:
-        "Support for larger repair and refurbishment projects: planning, coordinating trades and clear documentation.",
+        "From preparation to handover we keep measures on track so everyone knows what comes next.",
       leistungTeaserCta: "Learn more",
       detailBreadcrumbAria: "Breadcrumb",
       detailBreadcrumbHome: "Home",
@@ -641,14 +644,14 @@
         "Segel Immoverwaltung: personally led, structured building management (WEG), rental management and coordination in Karlsruhe and the region.",
       pageAboutH1: "About us",
       pageAboutLead:
-        "Personally led, grown from responsibility — reliability, clear processes, and sound implementation.",
+        "Personally led, dependable in day-to-day work and committed to truly taking responsibility.",
       pageAboutSectionHeading: "Stefan Kosker",
       pageAboutP1:
-        "Segel Immoverwaltung is personally led and has grown from a genuine sense of responsibility. I am guided by reliability, clear processes, and the determination not merely to administer matters, but to implement them thoroughly.",
+        "Segel Immoverwaltung is personally led and grew out of a very concrete sense of responsibility. For me, management must not only work on paper — it has to carry everyday life: dependable, clearly organised and thoroughly implemented.",
       pageAboutP2:
-        "When my father had to step back for health reasons at the start of the COVID period, I took over his managed properties and developed them step by step. From that responsibility emerged a way of working built on structure, traceability, and clearly defined responsibilities.",
+        "When my father had to step back for health reasons at the start of the COVID period, I took over his managed properties and continued them step by step. From that situation emerged a way of working built on reliability, clear responsibilities and traceable processes.",
       pageAboutP3:
-        "My IT background helps me organise administration clearly, digitalise processes sensibly, and keep the overview. At the same time I bring practical experience from the building environment — an advantage when alignment, implementation, and clean coordination matter.",
+        "My IT background helps me structure workflows sensibly, keep things manageable and digitalise where it truly makes day-to-day life easier. I also bring hands-on experience from the building sector — a real advantage when coordination, implementation and clean follow-through matter.",
       pageAboutP4:
         "Today Segel Immoverwaltung stands for dependable property management with a focus on WEGs — grounded in the conviction that good administration must always also factor in rental management, contractor coordination, and construction coordination.",
       pageAboutImgAlt: "Stefan Kosker",
@@ -658,14 +661,14 @@
         "Building management for condominium owners’ associations: annual accounts, owners’ meetings, maintenance and insurance — structured, with a dedicated contact person.",
       pageWegH1: "Building management (WEG)",
       pageWegLead:
-        "What we take on for your homeowners’ association in concrete terms — clearly structured and easy to follow.",
+        "So your WEG is looked after reliably day to day and open topics do not drift.",
       pageWegImgAlt: "Owners’ meeting (illustrative image)",
       pageMietMetaTitle: "Rental property management — Segel Immoverwaltung Karlsruhe & region",
       pageMietMetaDescription:
         "Rental management for landlords: ongoing organisation, tenant communication and commercial processes — with a dedicated contact person.",
       pageMietH1: "Rental property management",
       pageMietLead:
-        "Organised administration of rented properties: less day-to-day load, clear processes with tenants and reliable handling of commercial matters — without replacing legal advice where specialists are required.",
+        "We ease the load in your rental day-to-day, handle ongoing organisation and keep communication, accounting and coordination running together reliably.",
       pageMietImgAlt: "Rental management (illustrative image)",
       pageMietServicesHeading: "What we take on in rental management",
       pageMietBlock1Title: "Commercial administration",
@@ -685,11 +688,11 @@
         "Coordination of trades, caretaker and utilities: quotes, appointments and quality — documented in a structured way.",
       pageDlH1: "Contractor coordination",
       pageDlLead:
-        "When many parties are involved, calm steering matters: we bundle requests, obtain comparable quotes, coordinate appointments and follow execution — so nothing falls through the cracks.",
+        "When many people are involved, you need a clear overview above all. We coordinate enquiries, quotes, appointments and feedback so measures move forward reliably.",
       pageDlImgAlt: "On-site coordination (illustrative image)",
       pageDlServicesHeading: "What we take on in contractor coordination",
       pageDlServicesLead:
-        "So that services are aligned, implemented transparently and reliably.",
+        "So many individual topics become an orderly process again.",
       pageDlBlock1Title: "Recording & classification",
       pageDlBlock1Text:
         "Faults, measures and feedback are captured in a structured way, classified and clearly logged for further processing.",
@@ -710,11 +713,11 @@
         "Coordination of repair and refurbishment measures: trades, schedules and documentation — structured support.",
       pageBauH1: "Construction coordination",
       pageBauLead:
-        "Larger building or plant measures need planning and on-site support: we steer workflows, keep deadlines in view and provide traceable documentation for owners and the advisory board.",
+        "Larger projects need clear planning, dependable support and a calm overview. We coordinate workflows so deadlines, costs and open points stay traceable for owners and the advisory board.",
       pageBauImgAlt: "Construction / refurbishment (illustrative image)",
       pageBauServicesHeading: "What we take on for measures and projects",
       pageBauServicesLead:
-        "So that planning, implementation and handover proceed in a structured, reliable way.",
+        "So larger projects stay manageable and are supported cleanly throughout.",
       pageBauBlock1Title: "Foundations & requirements",
       pageBauBlock1Text:
         "We capture requirements based on resolutions, condition surveys or concrete needs, creating a sound basis for further planning.",
@@ -733,27 +736,27 @@
       pageBauBlock6Title: "Handover & documentation",
       pageBauBlock6Text:
         "After completion, relevant documents are organised for handover into ongoing administration — as a basis for accounting, continuity and future work.",
-      regionTitle: "Service area",
+      regionTitle: "Where we work for you",
       regionLead:
-        "Focus on Karlsruhe and the surrounding area (about 60 km). We regularly manage properties in:",
+        "Our focus is Karlsruhe and the region. We regularly look after properties in places including:",
       regionMore: "Other locations within the radius are welcome on request.",
       regionCities:
         "Achern · Baden-Baden · Bretten · Bruchsal · Bühl · Ettlingen · Germersheim · Heidelberg · Karlsruhe · Landau in der Pfalz · Mannheim · Pforzheim · Rastatt · Schwetzingen · Speyer · Stutensee · Waghäusel",
       processTitle: "How a change of management works",
       processLead:
-        "We guide the transition in a structured way and ensure an orderly, smooth handover.",
+        "A change of management does not have to be complicated. We guide the transition step by step so documents, responsibilities and ongoing topics are handed over cleanly.",
       step1Title: "Initial call & needs",
       step1Text:
-        "At the outset we clarify the key points — such as property or community, scope, current topics, contact persons and availability.",
+        "In the first conversation we look at your situation together: what already works well, where are open points and what does your community need right now?",
       step2Title: "Documents & takeover",
       step2Text:
-        "We take over existing documents and ongoing matters in a structured, traceable way — with a clear view of completeness and open items.",
+        "We review existing documents, organise ongoing topics cleanly and make sure nothing important is lost in the handover.",
       step3Title: "Go-live & communication",
       step3Text:
-        "At go-live we define responsibilities and communication channels and ensure the orderly continuation of ongoing administration and coordination topics — such as service charges, insurance, appointments and open measures.",
-      processQuickTitle: "Changing managers — the essentials",
+        "At go-live we establish clear responsibilities and reliable communication paths so your management continues in good order from day one.",
+      processQuickTitle: "How the transition works with us",
       processStepsBlurb:
-        "Three steps: clarify needs in an initial call → take over documents and ongoing cases in a structured way → start with clear responsibilities and communication paths.",
+        "First we clarify the situation together. Then we take over documents and open cases in an orderly way. Finally we start with clear responsibilities and a reliable communication channel.",
       processDocsHeading: "Documents we need first",
       processDocsLi1:
         "Latest annual statement, economic plan and current service-charge statements (if available)",
@@ -815,88 +818,88 @@
       contactEmailDisplay: CONTACT_EMAIL,
       contactCtaClosing: "Have we sparked your interest?",
       contactMicrocopy:
-        "Please contact us on a non-binding basis — by phone or by email. We usually get back to you within one business day and discuss how your enquiry can best be understood and taken forward. For a quick, targeted reply, a few brief details help us: which property or owners’ association it concerns, where the property is located, what topic you would like to discuss, and when you are easy to reach. That way you receive an appropriate first assessment and a clear next step without unnecessary detours.",
+        "Whether you want to set up management afresh, prepare a handover or simply see whether we are a good fit — please call or email. We listen to your situation, give a first assessment and say openly what the sensible next step is. We usually respond within one business day. A few brief details about the property, location and current topic help us prepare well.",
       contactDrawerAria: "Contact — phone and email",
-      contactCtaHome: "Send a non-binding inquiry",
+      contactCtaHome: "Request a non-binding initial call",
       contactMailSubjectHome: "Inquiry: initial call — Segel Immoverwaltung",
       contactMailBodyHome:
         "Hello,\n\nwe would like to request a non-binding initial call on building (WEG) management.\n\nAssociation / property:\nLocation:\nBrief note on your situation (e.g. changing managers, advice):\nHow to reach you:\n\nKind regards",
       mobileContactBarLabel: "Quick contact",
       mobileContactCall: "Call",
       mobileContactMail: "Email",
-      mobileContactRequest: "Inquiry",
+      mobileContactRequest: "Initial call",
       pageWegContactHook:
-        "Relieve the advisory board and manage a clean handover — we clarify needs and next steps in an initial call.",
-      pageWegContactCta: "Request a free initial call for your WEG",
+        "Ongoing support or an orderly change of management: we look together at what your WEG needs now and how a sensible start could look.",
+      pageWegContactCta: "Arrange a free initial call for your WEG",
       pageWegMailSubject: "Inquiry: building management (WEG) — Segel Immoverwaltung",
       pageWegMailBody:
         "Hello,\n\nwe are interested in building management for our condominium association.\n\nProperty / association:\nLocation:\nCurrent topic (e.g. changing managers, takeover):\nHow to reach you:\n\nKind regards",
       pageMietContactHook:
-        "Less day-to-day load in rental operations — we structure administration, tenant communication and commercial processes.",
-      pageMietContactCta: "Send a non-binding rental management inquiry",
+        "If you want your rented property looked after reliably, we are happy to discuss what support makes sense for your building.",
+      pageMietContactCta: "Inquire about rental management — non-binding",
       pageMietMailSubject: "Inquiry: rental management — Segel Immoverwaltung",
       pageMietMailBody:
         "Hello,\n\nwe would like to inquire about rental management for our rented unit(s).\n\nProperty / address:\nNumber of units / brief context:\nCurrent topic:\nHow to reach you:\n\nKind regards",
       pageDlContactHook:
-        "Trades, caretaker, utilities — we coordinate quotes, appointments and follow-up on site.",
-      pageDlContactCta: "Send a contractor coordination inquiry",
+        "We are happy to clarify with you which topics should be bundled and coordinated cleanly right now.",
+      pageDlContactCta: "Inquire about contractor coordination — non-binding",
       pageDlMailSubject: "Inquiry: contractor coordination — Segel Immoverwaltung",
       pageDlMailBody:
         "Hello,\n\nwe need support coordinating service providers at our property.\n\nProperty / address:\nType of need (e.g. maintenance, fault, several trades):\nHow to reach you:\n\nKind regards",
       pageBauContactHook:
-        "We support larger projects with planning, trades coordination and traceable documentation.",
-      pageBauContactCta: "Send a construction coordination inquiry",
+        "If a larger project is coming up, we are happy to discuss how to set up the next steps sensibly and in good order.",
+      pageBauContactCta: "Discuss a building project — non-binding",
       pageBauMailSubject: "Inquiry: construction coordination — Segel Immoverwaltung",
       pageBauMailBody:
         "Hello,\n\nwe are planning or carrying out a larger repair or refurbishment measure and are looking for coordination support.\n\nProperty / address:\nType / approximate scope:\nTimeline (if known):\nHow to reach you:\n\nKind regards",
-      pageWegFitHeading: "Is this a good fit?",
-      pageWegFitYesTitle: "A good fit if",
+      pageWegFitHeading: "Who this service suits well",
+      pageWegFitYesTitle: "Especially suitable when …",
       pageWegFitYes1:
         "You represent a condominium association with ongoing or planned professional management",
       pageWegFitYes2:
         "The advisory board or owners want to hand off operational topics in a structured way",
       pageWegFitYes3:
         "You are changing managers or need a clean takeover of documents and cases",
-      pageWegFitNoTitle: "Less of a fit if",
+      pageWegFitNoTitle: "Less suitable when …",
       pageWegFitNo1:
         "You only need one-off legal advice or litigation (a qualified lawyer is the right contact)",
       pageWegFitNo2:
         "The matter has no link to a managed property or owners’ association",
-      pageMietFitHeading: "Is this a good fit?",
-      pageMietFitYesTitle: "A good fit if",
+      pageMietFitHeading: "Who this service suits well",
+      pageMietFitYesTitle: "Especially suitable when …",
       pageMietFitYes1:
         "You own rented residential or commercial units and need day-to-day administration support",
       pageMietFitYes2:
         "You want tenant communication, statements and coordination handled with less friction",
       pageMietFitYes3:
         "You want a dedicated contact for organisational and commercial processes",
-      pageMietFitNoTitle: "Less of a fit if",
+      pageMietFitNoTitle: "Less suitable when …",
       pageMietFitNo1:
         "You only need legal disputes with tenants handled without any management scope",
       pageMietFitNo2:
         "You do not manage a property in the sense described above",
-      pageDlFitHeading: "Is this a good fit?",
-      pageDlFitYesTitle: "A good fit if",
+      pageDlFitHeading: "Who this service suits well",
+      pageDlFitYesTitle: "Especially suitable when …",
       pageDlFitYes1:
         "The property has several service providers or ongoing coordination topics (trades, caretaker, utilities)",
       pageDlFitYes2:
         "WEGs, landlords or managers want quotes, appointments and follow-up bundled in one place",
       pageDlFitYes3:
         "Measures otherwise stall or responsibilities stay unclear",
-      pageDlFitNoTitle: "Less of a fit if",
+      pageDlFitNoTitle: "Less suitable when …",
       pageDlFitNo1:
         "You only need a one-off minor repair without ongoing coordination",
       pageDlFitNo2:
         "There is no real need to steer several providers in a structured way",
-      pageBauFitHeading: "Is this a good fit?",
-      pageBauFitYesTitle: "A good fit if",
+      pageBauFitHeading: "Who this service suits well",
+      pageBauFitYesTitle: "Especially suitable when …",
       pageBauFitYes1:
         "You are planning larger repair, refurbishment or modernisation with several trades",
       pageBauFitYes2:
         "WEGs or owners want support for planning, comparison and execution",
       pageBauFitYes3:
         "Deadlines, costs and documentation should stay clear from the outset",
-      pageBauFitNoTitle: "Less of a fit if",
+      pageBauFitNoTitle: "Less suitable when …",
       pageBauFitNo1:
         "You only want architectural or site supervision by an external planner without a management link",
       pageBauFitNo2:
