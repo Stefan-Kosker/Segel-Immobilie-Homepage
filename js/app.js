@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  /** Production contact address; keep in sync with visible mailto links in HTML. */
+  var CONTACT_EMAIL = "kontakt@segel-immo.de";
+
   function pathIndicatesEn() {
     var path = window.location.pathname.replace(/\\/g, "/");
     return path.indexOf("/en/") !== -1;
@@ -37,6 +40,11 @@
     if (/\/ueber-uns\.html$/i.test(path)) {
       var aboutBase = path.replace(/\/ueber-uns\.html$/i, "");
       return aboutBase + "/en/ueber-uns.html" + search + hash;
+    }
+
+    if (/\/datenschutz\.html$/i.test(path)) {
+      var dsBase = path.replace(/\/datenschutz\.html$/i, "");
+      return dsBase + "/en/datenschutz.html" + search + hash;
     }
 
     return path + search + hash;
@@ -92,6 +100,7 @@
       navFaq: "FAQ",
       navContact: "Kontakt",
       navImprint: "Impressum",
+      navPrivacy: "Datenschutz",
       navAbout: "Über uns",
       navOpenMenu: "Menü öffnen",
       navCloseMenu: "Menü schließen",
@@ -339,7 +348,7 @@
         "Wir verbinden persönliche Betreuung mit strukturierter Arbeitsweise und einem hohen Anspruch an Verlässlichkeit. Unser Ziel ist nicht nur die laufende Verwaltung, sondern eine langfristig gut organisierte und stabile Betreuung Ihrer Eigentümergemeinschaft.",
       contactTitle: "Kontakt",
       contactPhoneDisplay: "07244 558 05 02",
-      contactEmailDisplay: "kontakt@nomailyet.com",
+      contactEmailDisplay: CONTACT_EMAIL,
       contactCtaClosing: "Haben wir Ihr Interesse geweckt?",
       contactMicrocopy:
         "Nehmen Sie unverbindlich Kontakt mit uns auf – telefonisch oder per E-Mail. Wir melden uns in der Regel innerhalb eines Werktags zurück und besprechen mit Ihnen, wie Ihr Anliegen am besten eingeordnet und weitergeführt werden kann. Für eine schnelle und gezielte Rückmeldung helfen uns einige kurze Angaben: um welches Objekt oder welche Gemeinschaft es geht, in welchem Ort sich die Immobilie befindet, welches Thema Sie beschäftigt und wann Sie gut erreichbar sind. So erhalten Sie ohne Umwege eine passende erste Einschätzung und einen klaren nächsten Schritt.",
@@ -428,6 +437,9 @@
         "Sie ausschließlich Architektur- oder Bauleitung durch einen externen Fachplaner ohne Verwaltungsbezug suchen",
       pageBauFitNo2:
         "es sich um sehr kleine Maßnahmen ohne Koordinationsbedarf handelt",
+      pagePrivacyMetaTitle: "Datenschutz — Segel Immoverwaltung",
+      pagePrivacyMetaDescription:
+        "Datenschutzhinweise der Segel Immoverwaltung: Verantwortlicher, Hosting, E-Mail-Kontakt und Ihre Rechte nach der DSGVO.",
       imprintTitle: "Impressum",
       imprintDdg: "Angaben gemäß § 5 DDG",
       imprintOwnerName: "Stefan Kosker",
@@ -456,6 +468,7 @@
       navFaq: "FAQ",
       navContact: "Contact",
       navImprint: "Legal notice",
+      navPrivacy: "Privacy",
       navAbout: "About",
       navOpenMenu: "Open menu",
       navCloseMenu: "Close menu",
@@ -703,7 +716,7 @@
         "We combine personal support with structured working practices and high standards of reliability. Our goal is not only day-to-day administration but long-term, well-organised and stable care for your owners' association.",
       contactTitle: "Contact",
       contactPhoneDisplay: "07244 558 05 02",
-      contactEmailDisplay: "kontakt@nomailyet.com",
+      contactEmailDisplay: CONTACT_EMAIL,
       contactCtaClosing: "Have we sparked your interest?",
       contactMicrocopy:
         "Please contact us on a non-binding basis — by phone or by email. We usually get back to you within one business day and discuss how your enquiry can best be understood and taken forward. For a quick, targeted reply, a few brief details help us: which property or owners’ association it concerns, where the property is located, what topic you would like to discuss, and when you are easy to reach. That way you receive an appropriate first assessment and a clear next step without unnecessary detours.",
@@ -792,6 +805,9 @@
         "You only want architectural or site supervision by an external planner without a management link",
       pageBauFitNo2:
         "The job is very small with no coordination needs",
+      pagePrivacyMetaTitle: "Privacy — Segel Immoverwaltung",
+      pagePrivacyMetaDescription:
+        "Privacy information for Segel Immoverwaltung: controller, hosting, email contact and your rights under the GDPR. The German version is legally authoritative.",
       imprintTitle: "Legal notice (Impressum)",
       imprintDdg: "Information pursuant to § 5 DDG (Digital Services Act)",
       imprintOwnerName: "Stefan Kosker",
@@ -862,7 +878,7 @@
       document.title = titleEl.textContent;
     }
 
-    const contactEmail = "kontakt@nomailyet.com";
+    const contactEmail = CONTACT_EMAIL;
     const pack = mailPackForContext(t, getMailContext());
     const subj = encodeURIComponent(pack.sub);
     const body = encodeURIComponent(pack.body);

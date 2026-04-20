@@ -1676,6 +1676,17 @@ body:has(.mobile-contact-bar.is-visible) {
   margin-bottom: var(--space-lg);
 }
 
+.footer-legal-links {
+  font-size: 0.9rem;
+  margin: 0 0 var(--space-md);
+}
+
+.footer-legal-links a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .footer-note {
   font-size: 0.85rem;
   opacity: 0.88;

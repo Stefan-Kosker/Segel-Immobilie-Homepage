@@ -17,9 +17,68 @@
       rel="stylesheet"
     />
     <link rel="icon" href="images/Logos/Logo-Small.png" type="image/png" />
-    <link rel="alternate" hreflang="de" href="./index.html" />
-    <link rel="alternate" hreflang="en" href="./en/index.html" />
-    <script src="js/hreflang.js"></script>
+    <link rel="canonical" href="https://segel-immo.de/" />
+    <link rel="alternate" hreflang="de" href="https://segel-immo.de/" />
+    <link rel="alternate" hreflang="en" href="https://segel-immo.de/en/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://segel-immo.de/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Segel Immoverwaltung" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://segel-immo.de/" />
+    <meta property="og:title" content="Segel Immoverwaltung — Hausverwaltung &amp; Koordination Karlsruhe &amp; Region" />
+    <meta property="og:description" content="Hausverwaltung für WEGs, Mietverwaltung, Dienstleister- und Baukoordination mit klaren Prozessen. Einzugsgebiet Karlsruhe, Rhein-Neckar, Kraichgau und Umgebung." />
+    <meta property="og:image" content="https://segel-immo.de/images/Logos/Logo-Small.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Segel Immoverwaltung — Hausverwaltung &amp; Koordination Karlsruhe &amp; Region" />
+    <meta name="twitter:description" content="Hausverwaltung für WEGs, Mietverwaltung, Dienstleister- und Baukoordination mit klaren Prozessen. Einzugsgebiet Karlsruhe, Rhein-Neckar, Kraichgau und Umgebung." />
+    <meta name="twitter:image" content="https://segel-immo.de/images/Logos/Logo-Small.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://segel-immo.de/#website",
+            "url": "https://segel-immo.de/",
+            "name": "Segel Immoverwaltung",
+            "inLanguage": "de-DE",
+            "publisher": { "@id": "https://segel-immo.de/#organization" }
+          },
+          {
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://segel-immo.de/#organization",
+            "name": "Segel Immoverwaltung",
+            "url": "https://segel-immo.de/",
+            "telephone": "+4972445580502",
+            "email": "kontakt@segel-immo.de",
+            "image": "https://segel-immo.de/images/Logos/Logo-Small.png",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Eggensteiner Straße 57",
+              "addressLocality": "Stutensee",
+              "postalCode": "76297",
+              "addressCountry": "DE"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 49.067591,
+              "longitude": 8.460911
+            },
+            "vatID": "DE343859857",
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 49.067591,
+                "longitude": 8.460911
+              },
+              "geoRadius": 60000
+            }
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="css/styles.css" />
     <script>
       (function () {
@@ -96,6 +155,7 @@
               <a href="#faq" data-i18n="navFaq">FAQ</a>
               <a href="#kontakt" data-i18n="navContact">Kontakt</a>
               <a href="#impressum" data-i18n="navImprint">Impressum</a>
+              <a href="datenschutz.html" data-i18n="navPrivacy">Datenschutz</a>
             </nav>
             <div
               class="nav-drawer__contact"
@@ -122,7 +182,7 @@
               >
               <a
                 class="nav-drawer__contact-link nav-drawer__mail mailto-contact-link"
-                href="mailto:kontakt@nomailyet.com"
+                href="mailto:kontakt@segel-immo.de"
                 ><span class="nav-drawer__contact-icon" aria-hidden="true"
                   ><svg
                     width="20"
@@ -136,7 +196,7 @@
                       d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
                     />
                     <path d="m22 6-10 7L2 6" /></svg></span
-                ><span data-i18n="contactEmailDisplay">kontakt@nomailyet.com</span></a
+                ><span data-i18n="contactEmailDisplay">kontakt@segel-immo.de</span></a
               >
             </div>
           </div>
@@ -730,7 +790,7 @@
               >
               <a
                 class="contact-block__channel contact-block__email mailto-contact-link"
-                href="mailto:kontakt@nomailyet.com"
+                href="mailto:kontakt@segel-immo.de"
                 ><span class="contact-block__channel-icon" aria-hidden="true"
                   ><svg
                     width="20"
@@ -744,13 +804,13 @@
                       d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
                     />
                     <path d="m22 6-10 7L2 6" /></svg></span
-                ><span data-i18n="contactEmailDisplay">kontakt@nomailyet.com</span></a
+                ><span data-i18n="contactEmailDisplay">kontakt@segel-immo.de</span></a
               >
             </div>
             <a
               class="btn btn--primary"
               id="mailto-contact"
-              href="mailto:kontakt@nomailyet.com"
+              href="mailto:kontakt@segel-immo.de"
               >Unverbindliche Anfrage senden</a
             >
           </div>
@@ -776,13 +836,16 @@
               <p data-i18n="imprintPhone">Telefon: 07244 558 05 02</p>
               <p>
                 <span data-i18n="imprintEmailLabel">E-Mail:</span>
-                <a href="mailto:kontakt@nomailyet.com" class="mailto-contact-link">kontakt@nomailyet.com</a>
+                <a href="mailto:kontakt@segel-immo.de" class="mailto-contact-link">kontakt@segel-immo.de</a>
               </p>
               <p data-i18n="imprintVatIntro">Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:</p>
               <p data-i18n="imprintVatId">DE343859857</p>
             </div>
           </div>
         </div>
+        <p class="footer-legal-links">
+          <a href="datenschutz.html" data-i18n="navPrivacy">Datenschutz</a>
+        </p>
         <p class="footer-note" style="border: 0; padding-top: 0">
           © <span id="year"></span>
           <span data-i18n="footerCompany">Segel Immoverwaltung</span>
@@ -801,7 +864,7 @@
       >
       <a
         class="mobile-contact-bar__btn mobile-contact-bar__btn--mail mailto-contact-link"
-        href="mailto:kontakt@nomailyet.com"
+        href="mailto:kontakt@segel-immo.de"
         ><span data-i18n="mobileContactMail">E-Mail</span></a
       >
       <a class="mobile-contact-bar__btn mobile-contact-bar__btn--request" href="#kontakt"
