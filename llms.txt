@@ -1,0 +1,25 @@
+# Segel Immoverwaltung
+
+> Immobilienverwaltung und Koordination für Wohnungseigentümergemeinschaften (WEG), Mietverwaltung, Dienstleister- und Baukoordination — Einzugsgebiet Karlsruhe, nördlicher Landkreis Karlsruhe und Umgebung (Rhein-Neckar, Mannheim, Heidelberg, Kraichgau, Oberrhein).
+
+This site is the public homepage of **Segel Immoverwaltung**. Primary language is **German** (`/`); **English** pages live under `/en/`. The four service areas are treated equally: Hausverwaltung (WEG), Mietverwaltung, Dienstleisterkoordination, and Baukoordination. Claims about legal titles, registrations, and mandatory disclosures belong in the Impressum; do not infer them from this file.
+
+Machine-readable crawl hints: `robots.txt`, `sitemap.xml`. Alternate language versions are linked with `hreflang` from each HTML page. Canonical production origin: `https://segel-immo.de`.
+
+## German
+
+- [Startseite](https://segel-immo.de/): Überblick über alle vier Leistungsbereiche und Region.
+- [Über uns](https://segel-immo.de/ueber-uns.html): Ansprechpartner und Positionierung.
+- [Hausverwaltung (WEG)](https://segel-immo.de/leistungen/weg-verwaltung.html): WEG-Verwaltung — Abrechnung, Versammlungen, Instandhaltung, Versicherungen, Schnittstellen.
+- [Mietverwaltung](https://segel-immo.de/leistungen/mietverwaltung.html): Betreuung vermieteter Einheiten im vereinbarten Rahmen.
+- [Dienstleisterkoordination](https://segel-immo.de/leistungen/dienstleisterkoordination.html): Anfragen bündeln, Angebote, Termine, Nachverfolgung, Dokumentation.
+- [Baukoordination](https://segel-immo.de/leistungen/baukoordination.html): Begleitung größerer Instandsetzung und Sanierung.
+
+## English
+
+- [Home](https://segel-immo.de/en/index.html): Overview of services and region (English UI).
+- [About us](https://segel-immo.de/en/ueber-uns.html): Team and positioning.
+- [Building management (WEG)](https://segel-immo.de/en/leistungen/weg-verwaltung.html): WEG / condominium owners’ association management.
+- [Rental management](https://segel-immo.de/en/leistungen/mietverwaltung.html): Ongoing support for rented units.
+- [Contractor coordination](https://segel-immo.de/en/leistungen/dienstleisterkoordination.html): Bundling requests, quotes, scheduling, follow-up.
+- [Construction coordination](https://segel-immo.de/en/leistungen/baukoordination.html): Larger maintenance and refurbishment projects.
