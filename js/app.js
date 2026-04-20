@@ -113,7 +113,7 @@
       brandLogoAlt: "Segel Immoverwaltung — Logo",
       heroH1: "Verwaltung und Koordination, die entlasten und Struktur schaffen",
       heroLead:
-        "Vier Schwerpunkte in Karlsruhe und der Region: Hausverwaltung (WEG), Mietverwaltung, Dienstleister- und Baukoordination — mit klaren Abläufen und festem Ansprechpartner.",
+        "Segel Immoverwaltung betreut in Karlsruhe und der Region vier gleichwertige Schwerpunkte: Hausverwaltung (WEG), Mietverwaltung, Dienstleister- und Baukoordination — mit klaren Abläufen und festem Ansprechpartner.",
       carouselRoleDesc: "Karussell",
       carouselLeistungenHeading: "Unsere Leistungen",
       carouselControlsAria: "Karussell steuern",
@@ -121,6 +121,54 @@
       carouselNextAria: "Nächste Leistung",
       ctaPrimary: "Kostenloses Erstgespräch für Ihre WEG anfragen",
       ctaSecondary: "Verwaltungswechsel in 3 Schritten",
+      homeEntityTitle: "Wer wir sind — und wo wir arbeiten",
+      homeEntityLead:
+        "Segel Immoverwaltung ist eine persönlich geführte Immobilienverwaltung mit Sitz in Stutensee (Landkreis Karlsruhe). Inhaber: Stefan Kosker. Die vier Leistungsfelder Hausverwaltung (WEG), Mietverwaltung sowie Dienstleister- und Baukoordination sind bei uns gleichgewichtig aufgestellt. Wir betreuen Objekte im Raum Karlsruhe, nördlicher Landkreis Karlsruhe und Umgebung — unter anderem Rhein-Neckar, Mannheim, Heidelberg, Kraichgau und Oberrhein, typischerweise in etwa 60 km Umkreis.",
+      homeEntityTrustListAria: "Verlässliche Angaben im Überblick",
+      homeEntityTrust1:
+        "Anschrift, Telefon und USt-IdNr. stehen transparent im Impressum.",
+      homeEntityTrust2:
+        "Auf Anfragen antworten wir in der Regel innerhalb eines Werktags.",
+      homeEntityTrust3:
+        "Zur Person, zum Aufbau und zur Arbeitsweise: siehe Über uns.",
+      homeEntityAboutLink: "Mehr zu Stefan Kosker und zur Geschichte von Segel Immoverwaltung",
+      answerFirstTitle: "Kurz & klar",
+      answerWhoLabel: "Für wen ist das?",
+      answerWhatLabel: "Was übernehmen wir konkret?",
+      answerStartLabel: "Wie läuft der Start ab?",
+      answerReplyLabel: "Wann melden wir uns zurück?",
+      pageWegAnswerWho:
+        "Wohnungseigentümergemeinschaften, deren Beirat oder Eigentümerinnen und Eigentümer Hausverwaltung im beschriebenen Umfang suchen — im Einzugsgebiet um Karlsruhe, den nördlichen Landkreis Karlsruhe und die umliegende Region (u. a. Rhein-Neckar, Mannheim, Heidelberg, Kraichgau, Oberrhein, typisch ca. 60 km).",
+      pageWegAnswerWhat:
+        "Unter anderem Jahresabrechnungen und Wirtschaftspläne, Vorbereitung und Nachbereitung der Eigentümerversammlungen inklusive Protokoll und Beschlussumsetzung, Instandhaltung und Handwerkerkoordination, Versicherungen und Schadensfälle, Hausgeld und Unterlagen sowie die Schnittstellen zu Steuerberatung und Recht — mit festem Ansprechpartner.",
+      pageWegAnswerStart:
+        "Erstgespräch zur Klärung von Objekt, Bedarf und Ansprechpartnern, dann strukturierte Übernahme der Unterlagen und laufenden Vorgänge, anschließend Start mit festen Zuständigkeiten (auf der Startseite auch unter „Verwaltungswechsel in 3 Schritten“ beschrieben).",
+      pageWegAnswerReply:
+        "Auf Ihre Anfrage reagieren wir üblicherweise innerhalb eines Werktags telefonisch oder per E-Mail.",
+      pageMietAnswerWho:
+        "Eigentümerinnen und Eigentümer vermieteter Einheiten, die kaufmännische und organisatorische Betreuung sowie koordinierte Mieterkommunikation im vereinbarten Rahmen brauchen — im gleichen regionalen Einzugsgebiet wie unsere übrigen Leistungen.",
+      pageMietAnswerWhat:
+        "Laufende kaufmännische Abläufe (z. B. Mieteingänge, Nebenkosten, Fristen), organisatorische Mieterbetreuung und technische Koordination mit Handwerk im Rahmen der Vereinbarung sowie transparente Eigentümerinformation — ohne Rechtsberatung zu ersetzen, wo Fachanwälte zuständig sind.",
+      pageMietAnswerStart:
+        "Erstgespräch zu Objekt und Bedarf, Abstimmung des Leistungsumfangs, dann strukturierter Start mit festem Ansprechpartner und klaren Kommunikationswegen.",
+      pageMietAnswerReply:
+        "In der Regel innerhalb eines Werktags, telefonisch oder per E-Mail.",
+      pageDlAnswerWho:
+        "Eigentümer, Verwaltungen und Objekte mit vielen parallelen Anfragen an Handwerk, Hausmeister, Versorger oder andere Partner — wenn Angebote, Termine und Nachverfolgung zentral gebündelt werden sollen.",
+      pageDlAnswerWhat:
+        "Erfassung und Einordnung der Themen, Einholen und Abgleich von Angeboten, Koordination von Beauftragung und Terminen sowie durchgehende Dokumentation und Nachverfolgung bis zum Abschluss der Leistung.",
+      pageDlAnswerStart:
+        "Kurzbeschreibung Ihrer Situation reicht für die Ersteinschätzung; gemeinsam priorisieren wir die nächsten Schritte und legen Zuständigkeiten sowie Kommunikationswege fest.",
+      pageDlAnswerReply:
+        "Üblicherweise innerhalb eines Werktags, telefonisch oder per E-Mail.",
+      pageBauAnswerWho:
+        "Wohnungseigentümergemeinschaften, Eigentümerinnen und Eigentümer sowie Vorhaben mit größeren Instandsetzungs- oder Sanierungsmaßnahmen, wenn Planung, Gewerke und Termine strukturiert begleitet und dokumentiert werden sollen.",
+      pageBauAnswerWhat:
+        "Steuerung der Abläufe, Abstimmung der Gewerke und Terminrahmen, Fokus auf Kosten- und Zeitrahmen im Rahmen der Beschlüsse sowie nachvollziehbare Dokumentation für Beirat und Eigentümer.",
+      pageBauAnswerStart:
+        "Erstgespräch zu Umfang, Zeitfenster und Schnittstellen (z. B. Beirat, Sondervermögen), danach strukturierter Projektstart mit klaren Zuständigkeiten und Kommunikationswegen.",
+      pageBauAnswerReply:
+        "In der Regel innerhalb eines Werktags, telefonisch oder per E-Mail.",
       pillarsTitle: "Was uns ausmacht",
       pillar1Title: "Entlastung",
       pillar1Text:
@@ -309,10 +357,10 @@
       faqTitle: "Häufige Fragen",
       faq1Q: "Wie schnell erreiche ich jemanden bei Dringlichem?",
       faq1A:
-        "Bei dringenden Anliegen sind wir für die Eigentümergemeinschaft schnell und verlässlich erreichbar. Schadensfälle, technische Störungen oder andere akute Themen bearbeiten wir mit hoher Priorität, damit keine unnötige Zeit verloren geht. Uns ist wichtig, dass Sie sich im Ernstfall nicht allein gelassen fühlen.",
+        "Akute Schäden, Sicherheitsrisiken oder Störungen priorisieren wir und halten die Kommunikation eng. Erreichbarkeit klären wir im Erstgespräch; auf normale Anfragen antworten wir in der Regel innerhalb eines Werktags.",
       faq2Q: "Gibt es einen festen Ansprechpartner?",
       faq2A:
-        "Ja, bei uns haben Sie einen festen Ansprechpartner, der Ihre WEG und die Besonderheiten Ihrer Gemeinschaft kennt. Dadurch vermeiden wir unnötige Rückfragen, schaffen kurze Wege und sorgen für eine persönliche, verbindliche Betreuung. So wissen Sie immer, an wen Sie sich wenden können.",
+        "Ja. Sie haben einen festen Ansprechpartner, der Ihre Objektdaten und den Beschluss- und Kommunikationskontext kennt — weniger Rückfragen, klare Zuständigkeit.",
       faq3Q: "Sind auch kleinere WEGs willkommen?",
       faq3A:
         "Selbstverständlich. Wir betreuen nicht nur größere Gemeinschaften, sondern auch kleinere WEGs engagiert, zuverlässig und mit der gleichen Sorgfalt. Gerade kleinere Eigentümergemeinschaften profitieren von einer strukturierten, persönlichen und gut organisierten Verwaltung.",
@@ -339,13 +387,13 @@
         "Wir kommunizieren mit Eigentümern digital, postalisch und telefonisch – je nachdem, was im jeweiligen Fall sinnvoll und gewünscht ist. Dabei achten wir auf eine zuverlässige Erreichbarkeit, klare Informationen und eine verbindliche Bearbeitung aller Anliegen. So ist eine moderne und zugleich persönliche Kommunikation gewährleistet.",
       faq11Q: "Wie schnell kann eine Übernahme erfolgen?",
       faq11A:
-        "Das hängt vom Einzelfall ab, ist aber in vielen Fällen gut planbar. Wir stimmen den Ablauf mit der Eigentümergemeinschaft ab und sorgen für einen geordneten Start ohne unnötige Reibungsverluste.",
+        "Die erste Rückmeldung auf Ihre Anfrage erfolgt in der Regel innerhalb eines Werktags. Der Start vor Ort hängt vom Umfang, laufenden Verträgen und der Übergabe an die Vorgängerverwaltung ab — den Zeitplan stimmen wir transparent mit der Gemeinschaft ab.",
       faq12Q: "Übernehmen Sie auch problematische oder festgefahrene WEGs?",
       faq12A:
         "Ja, auch Gemeinschaften mit erhöhtem Abstimmungsbedarf oder organisatorischen Herausforderungen können von einer klaren, strukturierten Verwaltung profitieren. Wichtig ist uns, wieder Ordnung, Transparenz und verlässliche Abläufe zu schaffen.",
       faq13Q: "Was unterscheidet Ihre Verwaltung von anderen Anbietern?",
       faq13A:
-        "Wir verbinden persönliche Betreuung mit strukturierter Arbeitsweise und einem hohen Anspruch an Verlässlichkeit. Unser Ziel ist nicht nur die laufende Verwaltung, sondern eine langfristig gut organisierte und stabile Betreuung Ihrer Eigentümergemeinschaft.",
+        "Persönliche Führung durch Stefan Kosker, gleichgewichtige Betreuung der vier Leistungsfelder auf der Website und klare, dokumentierte Abläufe statt generischer Versprechen. Hintergrund und Arbeitsweise sind unter „Über uns“ beschrieben.",
       contactTitle: "Kontakt",
       contactPhoneDisplay: "07244 558 05 02",
       contactEmailDisplay: CONTACT_EMAIL,
@@ -481,7 +529,7 @@
       brandLogoAlt: "Segel Immoverwaltung — logo",
       heroH1: "Management and coordination that create relief and structure",
       heroLead:
-        "Four focus areas in Karlsruhe and the region: building management (WEG), rental management, contractor and construction coordination — clear processes and a dedicated point of contact.",
+        "Segel Immoverwaltung serves Karlsruhe and the region across four equally weighted areas: building management (WEG), rental management, contractor and construction coordination — clear processes and a dedicated point of contact.",
       carouselRoleDesc: "carousel",
       carouselLeistungenHeading: "Our services",
       carouselControlsAria: "Carousel controls",
@@ -489,6 +537,54 @@
       carouselNextAria: "Next service",
       ctaPrimary: "Request a free initial call for your WEG",
       ctaSecondary: "Changing managers in 3 steps",
+      homeEntityTitle: "Who we are — and where we work",
+      homeEntityLead:
+        "Segel Immoverwaltung is an owner-led property management company based in Stutensee (Karlsruhe district). Owner: Stefan Kosker. We treat building management (WEG), rental management, contractor coordination and construction coordination as four equal pillars. We look after properties around Karlsruhe, the northern Karlsruhe district and the surrounding area — including Rhine-Neckar, Mannheim, Heidelberg, Kraichgau and the Upper Rhine — typically within about 60 km.",
+      homeEntityTrustListAria: "Key facts at a glance",
+      homeEntityTrust1:
+        "Address, phone and VAT ID are listed transparently in the legal notice.",
+      homeEntityTrust2:
+        "We usually reply to enquiries within one business day.",
+      homeEntityTrust3:
+        "Background on the owner and how we work: see About us.",
+      homeEntityAboutLink: "More about Stefan Kosker and how Segel Immoverwaltung came about",
+      answerFirstTitle: "At a glance",
+      answerWhoLabel: "Who is this for?",
+      answerWhatLabel: "What do we take on, in concrete terms?",
+      answerStartLabel: "How does onboarding work?",
+      answerReplyLabel: "When will you hear back from us?",
+      pageWegAnswerWho:
+        "Condominium owners’ associations (WEG), advisory boards and owners who need professional building management as described — in our service area around Karlsruhe, the northern Karlsruhe district and the wider region (including Rhine-Neckar, Mannheim, Heidelberg, Kraichgau and the Upper Rhine — typically within about 60 km).",
+      pageWegAnswerWhat:
+        "Including annual statements and economic plans, preparing and following up owners’ meetings with minutes and implementation of resolutions, maintenance and trades coordination, insurance and claims, service charges and records, and interfaces to tax/legal advisers — with a dedicated point of contact.",
+      pageWegAnswerStart:
+        "Initial call to clarify the property, scope and contacts, then structured handover of documents and open items, then go-live with clear responsibilities (see also Changing managers in 3 steps on the home page).",
+      pageWegAnswerReply:
+        "We usually respond to enquiries within one business day by phone or email.",
+      pageMietAnswerWho:
+        "Owners of rented units who need commercial and organisational support and coordinated tenant communication within an agreed scope — in the same regional area as our other services.",
+      pageMietAnswerWhat:
+        "Ongoing commercial processes (e.g. rent, service charges, deadlines), organisational tenant support and technical coordination with trades within the agreement, plus transparent owner reporting — without replacing legal advice where specialists are required.",
+      pageMietAnswerStart:
+        "Initial call on the property and requirements, alignment on scope, then structured onboarding with a dedicated contact and clear communication paths.",
+      pageMietAnswerReply:
+        "Usually within one business day, by phone or email.",
+      pageDlAnswerWho:
+        "Owners, property managers and buildings with many parallel enquiries to trades, caretakers, utilities or other partners — when quotes, appointments and follow-up need to be bundled.",
+      pageDlAnswerWhat:
+        "Capture and triage, obtain and compare quotes, coordinate commissioning and appointments, and document and track work through to completion.",
+      pageDlAnswerStart:
+        "A short description of your situation is enough for a first assessment; we then prioritise next steps together and define responsibilities and communication paths.",
+      pageDlAnswerReply:
+        "Usually within one business day, by phone or email.",
+      pageBauAnswerWho:
+        "Owners’ associations, owners and projects with larger refurbishment or renovation work where planning, trades and schedules need structured support and documentation.",
+      pageBauAnswerWhat:
+        "Steering workflows, coordinating trades and timelines, keeping cost and schedule aligned with resolutions, and traceable documentation for the board and owners.",
+      pageBauAnswerStart:
+        "Initial call on scope, time window and interfaces (e.g. board, special fund), then structured project start with clear responsibilities and communication paths.",
+      pageBauAnswerReply:
+        "Usually within one business day, by phone or email.",
       pillarsTitle: "What defines us",
       pillar1Title: "Relief",
       pillar1Text:
@@ -677,10 +773,10 @@
       faqTitle: "Frequently asked questions",
       faq1Q: "How quickly can I reach someone in an urgent case?",
       faq1A:
-        "For urgent matters we are quickly and reliably available for the owners' association. We handle damage events, technical faults and other acute issues with high priority so no unnecessary time is lost. It is important to us that you do not feel left alone when it really matters.",
+        "We prioritise acute damage, safety risks or outages and keep communication tight. Availability rules are agreed in the initial call; for routine enquiries we usually reply within one business day.",
       faq2Q: "Is there a fixed contact person?",
       faq2A:
-        "Yes, with us you have a dedicated contact person who knows your WEG and the specifics of your community. This avoids unnecessary back-and-forth, keeps communication paths short and ensures personal, dependable support. You always know exactly whom to turn to.",
+        "Yes — one fixed contact who knows your property data and the decision and communication context, so there is less back-and-forth and clear ownership.",
       faq3Q: "Are smaller WEGs welcome?",
       faq3A:
         "Absolutely. We look after not only larger communities but also smaller WEGs with the same commitment, reliability and care. Smaller owners' associations in particular benefit from structured, personal and well-organised management.",
@@ -707,13 +803,13 @@
         "We communicate with owners digitally, by post and by phone — depending on what makes sense and is preferred in each case. We focus on reliable availability, clear information and dependable handling of every concern. That ensures communication is both modern and personal.",
       faq11Q: "How quickly can a takeover happen?",
       faq11A:
-        "It depends on the individual case, but is often easy to plan. We align the process with the owners' association and ensure an orderly start without unnecessary friction.",
+        "We usually reply to your first enquiry within one business day. The on-site start depends on scope, existing contracts and handover from the previous manager — we agree a transparent timeline with the association.",
       faq12Q: "Do you also take on difficult or stuck WEGs?",
       faq12A:
         "Yes — communities with greater need for coordination or organisational challenges can also benefit from clear, structured management. Our aim is to restore order, transparency and reliable processes.",
       faq13Q: "What sets your management apart from other providers?",
       faq13A:
-        "We combine personal support with structured working practices and high standards of reliability. Our goal is not only day-to-day administration but long-term, well-organised and stable care for your owners' association.",
+        "Owner-led by Stefan Kosker, four equal service areas on the website as described, and clear documented processes instead of generic claims. Background and approach are on the About us page.",
       contactTitle: "Contact",
       contactPhoneDisplay: "07244 558 05 02",
       contactEmailDisplay: CONTACT_EMAIL,

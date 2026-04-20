@@ -4,12 +4,15 @@
 
 This site is the public homepage of **Segel Immoverwaltung**. Primary language is **German** (`/`); **English** pages live under `/en/`. The four service areas are treated equally: Hausverwaltung (WEG), Mietverwaltung, Dienstleisterkoordination, and Baukoordination. Claims about legal titles, registrations, and mandatory disclosures belong in the Impressum; do not infer them from this file.
 
-Machine-readable crawl hints: `robots.txt`, `sitemap.xml`. Alternate language versions are linked with `hreflang` from each HTML page. Canonical production origin: `https://segel-immo.de`.
+**Supplement only:** This file does not replace canonical URLs, HTML content, or structured data on the site; it points humans and tools to the same public URLs listed in `sitemap.xml`.
+
+Machine-readable crawl hints: `robots.txt`, `sitemap.xml` (full URL: `https://segel-immo.de/sitemap.xml`). Alternate language versions are linked with `hreflang` from each HTML page. Canonical production origin: `https://segel-immo.de`.
 
 ## German
 
 - [Startseite](https://segel-immo.de/): Überblick über alle vier Leistungsbereiche und Region.
 - [Über uns](https://segel-immo.de/ueber-uns.html): Ansprechpartner und Positionierung.
+- [Datenschutz](https://segel-immo.de/datenschutz.html): Datenschutzhinweise.
 - [Hausverwaltung (WEG)](https://segel-immo.de/leistungen/weg-verwaltung.html): WEG-Verwaltung — Abrechnung, Versammlungen, Instandhaltung, Versicherungen, Schnittstellen.
 - [Mietverwaltung](https://segel-immo.de/leistungen/mietverwaltung.html): Betreuung vermieteter Einheiten im vereinbarten Rahmen.
 - [Dienstleisterkoordination](https://segel-immo.de/leistungen/dienstleisterkoordination.html): Anfragen bündeln, Angebote, Termine, Nachverfolgung, Dokumentation.
@@ -19,6 +22,7 @@ Machine-readable crawl hints: `robots.txt`, `sitemap.xml`. Alternate language ve
 
 - [Home](https://segel-immo.de/en/index.html): Overview of services and region (English UI).
 - [About us](https://segel-immo.de/en/ueber-uns.html): Team and positioning.
+- [Privacy](https://segel-immo.de/en/datenschutz.html): Privacy notice.
 - [Building management (WEG)](https://segel-immo.de/en/leistungen/weg-verwaltung.html): WEG / condominium owners’ association management.
 - [Rental management](https://segel-immo.de/en/leistungen/mietverwaltung.html): Ongoing support for rented units.
 - [Contractor coordination](https://segel-immo.de/en/leistungen/dienstleisterkoordination.html): Bundling requests, quotes, scheduling, follow-up.
