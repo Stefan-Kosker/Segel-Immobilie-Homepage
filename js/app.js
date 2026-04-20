@@ -261,10 +261,11 @@
       pageBauBlock6Text:
         "Nach Abschluss werden relevante Unterlagen geordnet in die laufende Verwaltung übernommen – als Grundlage für Abrechnung, Fortführung und spätere Maßnahmen.",
       regionTitle: "Einzugsgebiet",
-      regionLead: "Schwerpunkt Karlsruhe und Umgebung (ca. 60 km), u. a.:",
-      regionMore: "Weitere Orte im Radius gerne — kurz nachfragen, ob es passt.",
+      regionLead:
+        "Schwerpunkt Karlsruhe und Umgebung (ca. 60 km). Regelmäßig betreuen wir Objekte u. a. in:",
+      regionMore: "Weitere Orte im Radius gerne auf Anfrage.",
       regionCities:
-        "Karlsruhe · Ettlingen · Bruchsal · Rastatt · Baden-Baden · Pforzheim · Mannheim · Heidelberg · Landau in der Pfalz · Germersheim · Speyer · Schwetzingen · Waghäusel · Stutensee · Bretten · Bühl · Achern",
+        "Achern · Baden-Baden · Bretten · Bruchsal · Bühl · Ettlingen · Germersheim · Heidelberg · Karlsruhe · Landau in der Pfalz · Mannheim · Pforzheim · Rastatt · Schwetzingen · Speyer · Stutensee · Waghäusel",
       processTitle: "So läuft der Verwaltungswechsel",
       processLead:
         "Wir begleiten den Wechsel strukturiert und sorgen für einen geordneten, reibungslosen Übergang.",
@@ -624,10 +625,11 @@
       pageBauBlock6Text:
         "After completion, relevant documents are organised for handover into ongoing administration — as a basis for accounting, continuity and future work.",
       regionTitle: "Service area",
-      regionLead: "Focus on Karlsruhe and surroundings (about 60 km), including:",
-      regionMore: "Other nearby locations welcome — ask us if yours fits.",
+      regionLead:
+        "Focus on Karlsruhe and the surrounding area (about 60 km). We regularly manage properties in:",
+      regionMore: "Other locations within the radius are welcome on request.",
       regionCities:
-        "Karlsruhe · Ettlingen · Bruchsal · Rastatt · Baden-Baden · Pforzheim · Mannheim · Heidelberg · Landau in der Pfalz · Germersheim · Speyer · Schwetzingen · Waghäusel · Stutensee · Bretten · Bühl · Achern",
+        "Achern · Baden-Baden · Bretten · Bruchsal · Bühl · Ettlingen · Germersheim · Heidelberg · Karlsruhe · Landau in der Pfalz · Mannheim · Pforzheim · Rastatt · Schwetzingen · Speyer · Stutensee · Waghäusel",
       processTitle: "How a change of management works",
       processLead:
         "We guide the transition in a structured way and ensure an orderly, smooth handover.",
